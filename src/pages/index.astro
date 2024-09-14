@@ -1,5 +1,6 @@
 ---
 import "../styles/base.css";
+import { Image } from "astro:assets";
 ---
 
 <!doctype html>
@@ -157,10 +158,12 @@ import "../styles/base.css";
           <div
             class="w-72 h-72 mt-24 rounded-full object-cover z-20 p-1 border border-black shadow bg-gradient-to-r from-cyan-500 to-blue-500 flex flex-col items-center justify-center"
           >
-            <img
+            <Image
               src="/public/img/NELSON.jpg"
-              alt=""
-              class="w-64 h-64 border border-black shadow-sm rounded-full object-cover"
+              alt="descriptive text"
+              width="200"
+              height="150"
+			   class="w-64 h-64 border border-black shadow-sm rounded-full object-cover"
             />
           </div>
         </div>
