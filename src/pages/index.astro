@@ -3,7 +3,7 @@ import "../styles/base.css";
 import myImage from "../img/NELSON.jpg";
 import Perfil from "../components/perfil.astro";
 import Layout from "../layouts/Layout.astro";
-import Card from "../components/Card.astro";
+import Tech from "../components/Tech.astro";
 import Nav from "../components/nav.astro";
 ---
 
@@ -77,62 +77,10 @@ import Nav from "../components/nav.astro";
       </div>
     </div>
 
-    <!-- titulo de mis habilidades  -->
-
-    <div class="mt-24 text-center">
-      <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-        Tecnologias
-      </h1>
-    </div>
     <!-- bloque de mis habilidades   -->
 
-    <div class="flex justify-center mt-24">
-      <div
-        class="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-12"
-      >
-        <Card
-          title="ASTRO"
-          body="framework frontend"
-          logoUrl="/img/Tecnology/astro.png"
-        />
-        <Card
-          title="LARAVEL"
-          body="framework Backend"
-          logoUrl="/img/Tecnology/laravel.png"
-        />
-        <Card
-          title="JS"
-          body="Lenguaje frontend"
-          logoUrl="/img/Tecnology/JS.png"
-        />
-        <Card title="CSS" body="Estilos web" logoUrl="/img/Tecnology/CSS.png" />
-        <Card
-          title="HTML"
-          body="Estructura web"
-          logoUrl="/img/Tecnology/HTML.png"
-        />
-        <Card
-          title="PHP"
-          body="Lenguaje backend"
-          logoUrl="/img/Tecnology/PHP.png"
-        />
-        <Card
-          title="GIT"
-          body="Control de versiones"
-          logoUrl="/img/Tecnology/git.png"
-        />
-        <Card
-          title="Github"
-          body="Repositorio de código"
-          logoUrl="/img/Tecnology/GitHub.png"
-        />
-        <Card
-          title="Tailwing"
-          body="Framework CSS"
-          logoUrl="/img/Tecnology/tailwind.png"
-        />
-      </div>
-    </div>
+    <Tech/>
+
     <!-- Estudios -->
 
 
