@@ -4,137 +4,13 @@ import myImage from "../img/NELSON.jpg";
 import Perfil from "../components/perfil.astro";
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
+import Nav from "../components/nav.astro";
 ---
 
+
+
 <Layout title="Nelson" <div class="bg-white">
-  <header class="absolute inset-x-0 top-0 z-50">
-    <nav
-      class="flex items-center justify-between p-6 lg:px-8"
-      aria-label="Global"
-    >
-      <div class="flex lg:flex-1">
-        <a href="#" class="-m-1.5 p-1.5">
-          <span class="sr-only">Your Company</span>
-          <img
-            class="h-8 w-auto"
-            src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-            alt=""
-          />
-        </a>
-      </div>
-      <div class="flex lg:hidden">
-        <button
-          type="button"
-          class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
-        >
-          <span class="sr-only">Open main menu</span>
-          <svg
-            class="h-6 w-6"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            aria-hidden="true"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
-          </svg>
-        </button>
-      </div>
-      <div class="hidden lg:flex lg:gap-x-12">
-        <a href="#" class="text-sm font-semibold leading-6 text-gray-900"
-          >Sobre mi</a
-        >
-        <a href="#" class="text-sm font-semibold leading-6 text-gray-900"
-          >Habilidades</a
-        >
-        <a href="#" class="text-sm font-semibold leading-6 text-gray-900"
-          >Proyectos</a
-        >
-        <a href="#" class="text-sm font-semibold leading-6 text-gray-900"
-          >Titulos</a
-        >
-      </div>
-      <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-        <a href="#" class="text-sm font-semibold leading-6 text-gray-900"
-          >Log in <span aria-hidden="true">&rarr;</span></a
-        >
-      </div>
-    </nav>
-    <!-- Mobile menu, show/hide based on menu open state. -->
-    <!-- <div class="lg:hidden" role="dialog" aria-modal="true">
-       
-          <div class="fixed inset-0 z-50"></div>
-          <div
-            class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10"
-          >
-            <div class="flex items-center justify-between">
-              <a href="#" class="-m-1.5 p-1.5">
-                <span class="sr-only">Your Company</span>
-                <img
-                  class="h-8 w-auto"
-                  src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                  alt=""
-                />
-              </a>
-              <button
-                type="button"
-                class="-m-2.5 rounded-md p-2.5 text-gray-700"
-              >
-                <span class="sr-only">Close menu</span>
-                <svg
-                  class="h-6 w-6"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="1.5"
-                  stroke="currentColor"
-                  aria-hidden="true"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M6 18L18 6M6 6l12 12"></path>
-                </svg>
-              </button>
-            </div>
-            <div class="mt-6 flow-root">
-              <div class="-my-6 divide-y divide-gray-500/10">
-                <div class="space-y-2 py-6">
-                  <a
-                    href="#"
-                    class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                    >Sobre mi</a
-                  >
-                  <a
-                    href="#"
-                    class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                    >Habilidades</a
-                  >
-                  <a
-                    href="#"
-                    class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                    >Proyectos</a
-                  >
-                  <a
-                    href="#"
-                    class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                    >Company</a
-                  >
-                </div>
-                <div class="py-6">
-                  <a
-                    href="#"
-                    class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                    >Log in</a
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-        </div> -->
-  </header>
+<Nav/>
 
   <div class="relative isolate px-6 pt-14 lg:px-8">
     <div
@@ -168,12 +44,11 @@ import Card from "../components/Card.astro";
 
       <!-- Texto -->
       <div class="w-full md:w-1/2 md:text-left text-center">
-        <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-          <h3 class="text-4xl font-bold">
-            Hola,<strong> Soy Nelson </strong>
-          </h3>
-          <br />
-        </h1>
+        <h3 class="text-4xl font-bold">
+          Hola,<strong> Soy Nelson </strong>
+        </h3>
+        <br />
+
         <p class="text-lg leading-8 text-gray-600">
           Estudió actualmente Ingeniería de Sistema, poseo los conocimientos
           fundamentales para desarrollar actividades asignadas en el área de
@@ -202,7 +77,7 @@ import Card from "../components/Card.astro";
       </div>
     </div>
 
-    <!-- titulo de mis habilidaaades  -->
+    <!-- titulo de mis habilidades  -->
 
     <div class="mt-24 text-center">
       <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
@@ -212,54 +87,56 @@ import Card from "../components/Card.astro";
     <!-- bloque de mis habilidades   -->
 
     <div class="flex justify-center mt-24">
-    <div class="grid  xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-12">
-    <Card
-      title="ASTRO"
-      body="framework frontend"
-      logoUrl="/img/Tecnology/astro.png"
-    />
-    <Card
-      title="LARAVEL"
-      body="framework Backend"
-      logoUrl="/img/Tecnology/laravel.png"
-    />
-    <Card
-      title="JS"
-      body="Lenguaje frontend"
-      logoUrl="/img/Tecnology/JS.png"
-    />
-    <Card
-      title="CSS"
-      body="Estilos web"
-      logoUrl="/img/Tecnology/CSS.png"
-    />
-    <Card
-      title="HTML"
-      body="Estructura web"
-      logoUrl="/img/Tecnology/HTML.png"
-    />
-    <Card
-      title="PHP"
-      body="Lenguaje backend"
-      logoUrl="/img/Tecnology/PHP.png"
-    />
-    <Card
-      title="GIT"
-      body="Control de versiones"
-      logoUrl="/img/Tecnology/git.png"
-    />
-    <Card
-      title="Github"
-      body="Repositorio de código"
-      logoUrl="/img/Tecnology/GitHub.png"
-    />
-    <Card
-    title="Tailwing"
-    body="Framework CSS"
-    logoUrl="/img/Tecnology/tailwind.png"
-  />
-  </div>
-</div>
+      <div
+        class="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-12"
+      >
+        <Card
+          title="ASTRO"
+          body="framework frontend"
+          logoUrl="/img/Tecnology/astro.png"
+        />
+        <Card
+          title="LARAVEL"
+          body="framework Backend"
+          logoUrl="/img/Tecnology/laravel.png"
+        />
+        <Card
+          title="JS"
+          body="Lenguaje frontend"
+          logoUrl="/img/Tecnology/JS.png"
+        />
+        <Card title="CSS" body="Estilos web" logoUrl="/img/Tecnology/CSS.png" />
+        <Card
+          title="HTML"
+          body="Estructura web"
+          logoUrl="/img/Tecnology/HTML.png"
+        />
+        <Card
+          title="PHP"
+          body="Lenguaje backend"
+          logoUrl="/img/Tecnology/PHP.png"
+        />
+        <Card
+          title="GIT"
+          body="Control de versiones"
+          logoUrl="/img/Tecnology/git.png"
+        />
+        <Card
+          title="Github"
+          body="Repositorio de código"
+          logoUrl="/img/Tecnology/GitHub.png"
+        />
+        <Card
+          title="Tailwing"
+          body="Framework CSS"
+          logoUrl="/img/Tecnology/tailwind.png"
+        />
+      </div>
+    </div>
+    <!-- Estudios -->
+
+
+
     <div
       class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
       aria-hidden="true"
