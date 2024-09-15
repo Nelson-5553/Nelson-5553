@@ -1,22 +1,28 @@
 ---
 interface Props {
-	title: string;
-	body: string;
-	href: string;
+  title: string;
+  body: string;
+  logoUrl: string;
 }
-
-const { href, title, body } = Astro.props;
+import { Image } from 'astro:assets';
+const { title, body, logoUrl } = Astro.props;
 ---
 
-<li class="bg-cyan-400 w-72 h-36">
-	<a href={href}>
-		<h2>
-			{title}
-			<span>&rarr;</span>
-		</h2>
-		<p>
-			{body}
-		</p>
-	</a>
-</li>
+
+<div
+  class="flex flex-col justify-center items-center bg-white shadow-xl sm:w-80 w-72 h-auto p-6 border border-gray-300 rounded-md"
+>
+  <h2 class="text-xl font-semibold mb-2">
+    {title}
+  </h2>
+  <img src={logoUrl} alt="Technology Logo" class="w-12 h-12 mb-3"/>
+  <div>
+    <p>
+      {body}
+    </p>
+  </div>
+</div>
+
+
+
 
