@@ -1,14 +1,58 @@
 ---
 import { Image } from 'astro:assets';
-const { src, alt, width = "64", height = "64", borderClass = "border-black" } = Astro.props;
+import myImage from "../img/NELSON.jpg";
+const {alt, width = "64", height = "64", borderClass = "border-black" } = Astro.props;
 ---
 
-<Image 
-  src={src} 
+
+
+  <div
+  class="flex flex-col md:flex-row justify-center items-center mt-24 gap-24"
+>
+  <!-- Imagen -->
+  <div
+    class="w-72 h-72 rounded-full object-cover z-20 p-1 border border-black shadow bg-gradient-to-r from-cyan-500 to-blue-500 flex items-center justify-center mb-6 md:mb-0"
+  >
+  <Image 
+  src={myImage} 
   alt={alt} 
   class={` w-${width}  h-${height} border ${borderClass} shadow-sm rounded-full object-cover`} 
   loading="eager" 
   />
+</div>
+  <!-- Texto -->
+  <div class="w-full md:w-1/2 md:text-left text-center">
+    <h3 class="text-4xl font-bold">
+      Hola,<strong> Soy Nelson </strong>
+    </h3>
+    <br />
 
+    <p class="text-lg leading-8 text-gray-600">
+      Estudió actualmente Ingeniería de Sistema, poseo los conocimientos
+      fundamentales para desarrollar actividades asignadas en el área de
+      tecnología, manejo habilidades ofimáticas y facilidad de aprendizaje
+      para nuevos softwares.
+    </p>
+
+    <!-- Botones -->
+    <div
+      class="mt-10 flex flex-col md:flex-row items-center justify-start gap-x-6"
+    >
+      <a
+        href="/PDF/HV.pdf"
+        download
+        class="rounded-md p-2 transition ease-in-out delay-150 bg-blue-500 text-white hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300"
+      >
+        Curriculum
+      </a>
+      <a
+        href="#"
+        class="text-sm font-semibold leading-6 text-gray-900 mt-4 md:mt-0"
+      >
+        Learn more <span aria-hidden="true">→</span>
+      </a>
+    </div>
+  </div>
+</div>
 
 <!-- w-64 h-64 border border-black shadow-sm rounded-full object-cover -->
