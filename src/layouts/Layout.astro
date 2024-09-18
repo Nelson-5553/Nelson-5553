@@ -10,7 +10,7 @@ import { ViewTransitions } from 'astro:transitions';
 ---
 
 <!doctype html>
-<html lang="en" transition:animate="slide">
+<html lang="en">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description" />
@@ -22,7 +22,7 @@ import { ViewTransitions } from 'astro:transitions';
 	</head>
 	<body>
 		<Nav/>
-		<div class="relative isolate px-6 pt-14 lg:px-8">
+		<div class="relative isolate px-6 pt-14 lg:px-8" transition:animate="fade">
 			<div
 			  class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
 			  aria-hidden="true"
