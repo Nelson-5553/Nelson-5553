@@ -1,11 +1,5 @@
 ---
-interface Props {
-//   BotonMenu: string;
-  // SobreMi: string;
-  // Skills: string;
-  // Proyectos: string;
-  
-}
+
 
 import NavMenu from "../components/NavMenu.astro"
 ---
@@ -27,6 +21,7 @@ import NavMenu from "../components/NavMenu.astro"
     </div>
     <div class="flex lg:hidden">
       <button
+        id="menu-open"
         type="button"
         class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
       >
@@ -47,11 +42,11 @@ import NavMenu from "../components/NavMenu.astro"
       </button>
     </div>
     <div class="hidden lg:flex lg:gap-x-12">
-     <NavMenu Name="Sobre mi" />
-     <NavMenu Name="Habilidades" />
-     <NavMenu Name="Proyectos" />
-     <NavMenu Name="Titulos" />
-     <NavMenu Name="Contactame" />
+     <NavMenu Ruta="/" Name="Sobre mi" />
+     <NavMenu Ruta="Skills" Name="Habilidades" />
+     <NavMenu Ruta="#" Name="Proyectos" />
+     <NavMenu Ruta="#" Name="Titulos" />
+     <NavMenu Ruta="#" Name="Contactame" />
 
     </div>
     <div class="hidden lg:flex lg:flex-1 lg:justify-end">

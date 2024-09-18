@@ -1,10 +1,11 @@
 ---
 interface Props {
     Name: string;
+    Ruta: string;
 }
-const {Name} = Astro.props
+const {Name, Ruta} = Astro.props
 ---
 
-<a href="#" class="text-sm font-semibold leading-6 text-gray-900"
+<a href={Ruta} class="text-sm font-semibold leading-6 text-gray-900" data-astro-prefech="tap"
         >{Name}</a
       >
