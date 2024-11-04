@@ -1,4 +1,6 @@
 ---
+import Atropos from './Atropos.astro';
+
 interface Props {
   title: string;
   body: string;
@@ -8,21 +10,21 @@ interface Props {
 const { title, body, logoUrl } = Astro.props;
 ---
 
-
+  <Atropos>
         <div
           class="flex flex-col justify-center items-center bg-white shadow-xl sm:w-80 w-72 h-auto p-6 border border-gray-300 rounded-md"
         >
-          <h2 class="text-xl font-semibold mb-2">
+          <h2 class="text-xl font-semibold mb-2" data-atropos-offset="5">
             {title}
           </h2>
-          <img src={logoUrl} alt="Technology Logo" class="w-12 h-12 mb-3"/>
-          <div>
+          <img src={logoUrl} alt="Technology Logo" class="w-12 h-12 mb-3" data-atropos-offset="10"/>
+          <div data-atropos-offset="5">
             <p>
               {body}
             </p>
           </div>
         </div>
-
+      </Atropos>
 <script>
   import Atropos from 'atropos';
   import 'atropos/css';

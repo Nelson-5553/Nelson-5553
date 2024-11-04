@@ -12,9 +12,14 @@
   import Atropos from "atropos";
   import "atropos/css";
 
-  const myAtropos = Atropos({
-    el: ".my-atropos",
-   
-    shadow: true,
+
+  const elements = document.querySelectorAll('.my-atropos');
+
+  elements.forEach((el) => {
+    Atropos({
+        el: el as HTMLElement,
+      shadow: true,
+      activeOffset: 40,
+    });
   });
 </script>
