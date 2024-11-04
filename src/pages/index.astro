@@ -5,28 +5,28 @@ import Projects from "../components/Projects.astro";
 import LayoutSlider from "../layouts/LayoutSlider.astro";
 ---
 
-
-
 <LayoutSlider title="Nelson" class="some-class">
   <div class="splide w-screen h-screen" id="mySplide">
     <div class="splide__track h-full">
       <ul class="splide__list">
-        <li class="splide__slide flex items-center justify-center bg-white"><Perfil alt="Hola" /></li>
+        <li class="splide__slide flex items-center justify-center bg-white h-auto">
+          <Perfil alt="Hola" />
+        </li>
         <li class="splide__slide flex items-center justify-center bg-gradient-to-tr to-blue-500 from-sky-400">
-        <div class="w-full h-full max-w-7xl mx-auto p-12">
-          <Tech />
-        </div>
+          <div class="w-full h-full max-w-7xl mx-auto p-6 sm:p-12">
+            <Tech />
+          </div>
         </li>
         <li class="splide__slide flex items-center justify-center bg-yellow-500">
-          <!-- <div class="w-full h-full max-w-md mx-auto"></div>
-          <Projects />
-        </div> -->
+          <!-- Aquí puedes incluir un Projects si deseas -->
+          <div class="w-full h-full max-w-md mx-auto p-6 sm:p-12">
+            <Projects />
+          </div>
         </li>
       </ul>
     </div>
   </div>
 </LayoutSlider>
 
-   
 
 
