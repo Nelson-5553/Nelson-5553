@@ -1,0 +1,20 @@
+<div class="my-atropos">
+  <div class="atropos-scale">
+    <div class="atropos-rotate">
+      <div class="atropos-inner">
+        <slot />
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  import Atropos from "atropos";
+  import "atropos/css";
+
+  const myAtropos = Atropos({
+    el: ".my-atropos",
+   
+    shadow: true,
+  });
+</script>

@@ -1,8 +1,10 @@
 ---
 import "../styles/base.css";
 import Tech from "../components/Tech.astro";
+import Projects from "../components/Projects.astro";
 import Perfil from "../components/perfil.astro";
 import Layout from "../layouts/Layout.astro";
+
 ---
 
 <Layout title="Nelson" class="bg-white">
@@ -11,62 +13,10 @@ import Layout from "../layouts/Layout.astro";
   <!-- foto de bienvenida   -->
   <Perfil alt="Foto de Nelson" />
   <!-- bloque de mis habilidades   -->
+
   <Tech />
+
   <!-- Proyectos -->
-
-  <div class="mt-32 flex justify-center items-center">
-    <div class="grid lg:grid-cols-2 gap-32">
-      <div class="flex flex-col justify-center items-center">
-        <div class="w-full h-96 bg-red-500 rounded-md">
-          <img
-            class="w-full h-full object-cover rounded-md"
-            src="/public/img/Projectos/portada-ikarus.jpeg"
-            alt="Proyecto Ikarus"
-          />
-        </div>
-        <div class="w-full h-24 bg-blue-500 rounded-md">
-          <!-- Contenido adicional aquí -->
-        </div>
-      </div>
-
-      <div class="flex flex-col justify-center items-center">
-        <div class="w-full h-96 bg-red-500 rounded-md">
-          <img
-            class="w-full h-full object-cover rounded-md"
-            src=""
-            alt="Otro Proyecto"
-          />
-        </div>
-        <div class="w-full h-24 bg-blue-500 rounded-md">
-          <!-- Contenido adicional aquí -->
-        </div>
-      </div>
-
-      <div class="flex flex-col justify-center items-center">
-        <div class="w-full h-96 bg-red-500 rounded-md">
-          <img
-            class="w-full h-full object-cover rounded-md"
-            src=""
-            alt="Otro Proyecto"
-          />
-        </div>
-        <div class="w-full h-24 bg-blue-500 rounded-md">
-          <!-- Contenido adicional aquí -->
-        </div>
-      </div>
-
-      <div class="flex flex-col justify-center items-center">
-        <div class="w-full h-96 bg-red-500 rounded-md">
-          <img
-            class="w-full h-full object-cover rounded-md"
-            src=""
-            alt="Otro Proyecto"
-          />
-        </div>
-        <div class="w-full h-24 bg-blue-500 rounded-md">
-          <!-- Contenido adicional aquí -->
-        </div>
-      </div>
-    </div>
-  </div>
+  <Projects/>
 </Layout>
+

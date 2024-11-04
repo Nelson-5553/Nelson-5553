@@ -4,25 +4,33 @@ interface Props {
   body: string;
   logoUrl: string;
 }
+
 const { title, body, logoUrl } = Astro.props;
 ---
 
 
-<div
-  class="flex flex-col justify-center items-center bg-white shadow-xl sm:w-80 w-72 h-auto p-6 border border-gray-300 rounded-md"
->
-  <h2 class="text-xl font-semibold mb-2">
-    {title}
-  </h2>
-  <!-- <Image logoUrl={}/> -->
-  <img src={logoUrl} alt="Technology Logo" class="w-12 h-12 mb-3"/>
-  <div>
-    <p>
-      {body}
-    </p>
-  </div>
-</div>
+        <div
+          class="flex flex-col justify-center items-center bg-white shadow-xl sm:w-80 w-72 h-auto p-6 border border-gray-300 rounded-md"
+        >
+          <h2 class="text-xl font-semibold mb-2">
+            {title}
+          </h2>
+          <img src={logoUrl} alt="Technology Logo" class="w-12 h-12 mb-3"/>
+          <div>
+            <p>
+              {body}
+            </p>
+          </div>
+        </div>
 
+<script>
+  import Atropos from 'atropos';
+  import 'atropos/css';
 
+    const myAtropos = Atropos({
+      el: '.my-atropos',
+      activeOffset: 40,
+      shadow: true,
+    });
 
-
+</script>
