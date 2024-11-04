@@ -6,27 +6,23 @@ const {alt, width = "64", height = "64"} = Astro.props;
 
 
 
-  <div
-  class="flex flex-col md:flex-row justify-center items-center gap-24"
->
+<div class="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-24">
   <!-- Imagen -->
-  <div
-    class="rounded-full object-cover z-20 p-3 shadow bg-gradient-to-r from-cyan-500 to-blue-500 flex items-center justify-center mb-6 md:mb-0"
-  >
-  <Image 
-  src={myImage} 
-  alt={alt} 
-  class={` w-${width}  h-${height}  shadow-sm rounded-full object-cover`} 
-  loading="eager" 
-  />
-</div>
+  <div class="rounded-full object-cover z-20 p-3 shadow bg-gradient-to-r from-cyan-500 to-blue-500 flex items-center justify-center mb-6 md:mb-0">
+    <Image 
+      src={myImage} 
+      alt={alt} 
+      class={`w-${width} h-${height} shadow-sm rounded-full object-cover`} 
+      loading="eager" 
+    />
+  </div>
+  
   <!-- Texto -->
-  <div class="w-full md:w-1/2 md:text-left text-center">
-    <h3 class="text-4xl font-bold">
+  <div class="w-full md:w-1/2 text-center md:text-left">
+    <h3 class="text-3xl md:text-4xl font-bold">
       Hola,<strong> Soy Nelson </strong>
     </h3>
     <br />
-
     <p class="text-lg leading-8 text-gray-600">
       Estudió actualmente Ingeniería de Sistema, poseo los conocimientos
       fundamentales para desarrollar actividades asignadas en el área de
@@ -35,9 +31,7 @@ const {alt, width = "64", height = "64"} = Astro.props;
     </p>
 
     <!-- Botones -->
-    <div
-      class="mt-10 flex flex-col md:flex-row items-center justify-start gap-x-6"
-    >
+    <div class="mt-2 md:mt-10 flex flex-col md:flex-row items-center justify-start gap-x-6">
       <a
         href="/PDF/HV.pdf"
         download
@@ -54,5 +48,6 @@ const {alt, width = "64", height = "64"} = Astro.props;
     </div>
   </div>
 </div>
+
 
 <!-- w-64 h-64 border border-black shadow-sm rounded-full object-cover -->
