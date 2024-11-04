@@ -12,8 +12,16 @@ import LayoutSlider from "../layouts/LayoutSlider.astro";
     <div class="splide__track h-full">
       <ul class="splide__list">
         <li class="splide__slide flex items-center justify-center bg-white"><Perfil alt="Hola" /></li>
-        <li class="splide__slide flex items-center justify-center bg-blue-500"><Tech /></li>
-        <li class="splide__slide flex items-center justify-center bg-yellow-500"><Projects /></li>
+        <li class="splide__slide flex items-center justify-center bg-gradient-to-tr to-blue-500 from-sky-400">
+        <div class="w-full h-full max-w-7xl mx-auto p-12">
+          <Tech />
+        </div>
+        </li>
+        <li class="splide__slide flex items-center justify-center bg-yellow-500">
+          <!-- <div class="w-full h-full max-w-md mx-auto"></div>
+          <Projects />
+        </div> -->
+        </li>
       </ul>
     </div>
   </div>

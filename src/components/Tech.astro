@@ -1,79 +1,105 @@
 ---
 import Card from "./Card.astro";
+
+const technologies = [
+  {
+    title: "ASTRO",
+    body: "Framework frontend",
+    logoUrl: "/img/Tecnology/astro.png",
+  },
+  {
+    title: "LARAVEL",
+    body: "Framework backend",
+    logoUrl: "/img/Tecnology/laravel.png",
+  },
+  { title: "JS", body: "Lenguaje frontend", logoUrl: "/img/Tecnology/JS.png" },
+  { title: "CSS", body: "Estilos web", logoUrl: "/img/Tecnology/CSS.png" },
+  { title: "HTML", body: "Estructura web", logoUrl: "/img/Tecnology/HTML.png" },
+  { title: "PHP", body: "Lenguaje backend", logoUrl: "/img/Tecnology/PHP.png" },
+  {
+    title: "GIT",
+    body: "Control de versiones",
+    logoUrl: "/img/Tecnology/git.png",
+  },
+  {
+    title: "GitHub",
+    body: "Repositorio de código",
+    logoUrl: "/img/Tecnology/GitHub.png",
+  },
+  {
+    title: "Tailwind",
+    body: "Framework CSS",
+    logoUrl: "/img/Tecnology/tailwind.png",
+  },
+];
 ---
 
+<div class="text-center mt-6">
+  <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl mb-12">
+    Habilidades
+  </h1>
+</div>
 
-<div class="flex flex-col justify-center">
-  <div class="mt-6 text-center">
-    <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl mb-12">
-      Tecnologias
-    </h1>
-  </div>
-  
-  <div
-    class="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-14"
-  >
-    
-      <Card
-        title="ASTRO"
-        body="framework frontend"
-        logoUrl="/img/Tecnology/astro.png"
-      />
-    
-    
-      <Card
-        title="LARAVEL"
-        body="framework Backend"
-        logoUrl="/img/Tecnology/laravel.png"
-      />
-    
-    
-      <Card
-        title="JS"
-        body="Lenguaje frontend"
-        logoUrl="/img/Tecnology/JS.png"
-      />
-    
-    
-      <Card 
-      title="CSS" 
-      body="Estilos web" 
-      logoUrl="/img/Tecnology/CSS.png" />
-    
-  
-      <Card
-        title="HTML"
-        body="Estructura web"
-        logoUrl="/img/Tecnology/HTML.png"
-      />
-    
-    
-      <Card
-        title="PHP"
-        body="Lenguaje backend"
-        logoUrl="/img/Tecnology/PHP.png"
-      />
-    
-    
-      <Card
-        title="GIT"
-        body="Control de versiones"
-        logoUrl="/img/Tecnology/git.png"
-      />
-    
-    
-      <Card
-        title="Github"
-        body="Repositorio de código"
-        logoUrl="/img/Tecnology/GitHub.png"
-      />
-    
-    
-      <Card
-        title="Tailwing"
-        body="Framework CSS"
-        logoUrl="/img/Tecnology/tailwind.png"
-      />
-    
+<div class="splide" id="techCarousel">
+  <div class="splide__track">
+    <ul class="splide__list">
+      {
+        technologies.map((tech) => (
+          <li class="splide__slide flex justify-center items-center">
+            <div class="relative group">
+              <img src={tech.logoUrl} alt={tech.title} class="w-16 h-16" />
+              <span class="absolute bottom-0 translate-y-full opacity-0 text-center text-white text-sm bg-gray-800 px-2 py-1 rounded transition-opacity duration-200 group-hover:opacity-100">
+                {tech.title}
+              </span>
+            </div>
+          </li>
+        ))
+      }
+    </ul>
   </div>
 </div>
+<br /><br />
+<div class="mt-12 text-center">
+  <p class="text-lg text-gray-700 mb-8">
+    A lo largo de mi trayectoria, he tenido la oportunidad de trabajar con una
+    variedad de herramientas y tecnologías que me han ayudado a construir
+    proyectos sólidos y funcionales.
+  </p>
+  <div
+    class="grid gap-6 md:grid-cols-2 xl:grid-cols-3 w-full max-w-md sm:max-w-full place-items-center h-full max-h-[calc(100vh-4rem)] overflow-y-auto"
+  >
+    {
+      technologies.map((tech) => (
+        <Card title={tech.title} body={tech.body} logoUrl={tech.logoUrl} />
+      ))
+    }
+  </div>
+</div>
+
+<script>
+  import Splide from "@splidejs/splide";
+  import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
+
+  const splide = new Splide("#techCarousel", {
+    type: "loop",
+    drag: "free",
+    focus: "center",
+    perPage: 8,
+    gap: "1rem",
+    arrows: false,
+    pagination: false,
+    autoScroll: {
+      speed: 1,
+    },
+    breakpoints: {
+      1024: {
+        perPage: 4,
+      },
+      768: {
+        perPage: 3,
+      },
+    },
+  });
+
+  splide.mount({ AutoScroll });
+</script>
