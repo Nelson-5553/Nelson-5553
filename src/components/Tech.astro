@@ -34,7 +34,7 @@ const technologies = [
 ];
 ---
 
-<div class="text-center mt-6">
+<div class="text-center mt-64">
   <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl mb-12">
     Habilidades
   </h1>
@@ -75,7 +75,7 @@ const technologies = [
 <script>
   import Splide from "@splidejs/splide";
   import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
-
+  import '@splidejs/splide/dist/css/splide.min.css';
   const splide = new Splide("#techCarousel", {
     type: "loop",
     drag: "free",
