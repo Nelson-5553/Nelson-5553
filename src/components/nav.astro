@@ -1,6 +1,7 @@
 ---
 
-
+import { Image } from "astro:assets"
+import N5553 from "/public/img/N5553.png"
 import NavMenu from "../components/NavMenu.astro"
 ---
 
@@ -12,7 +13,7 @@ import NavMenu from "../components/NavMenu.astro"
     <div class="flex lg:flex-1">
       <a href="#" class="-m-1.5 p-1.5">
         <span class="sr-only">Your Company</span>
-        XD
+        <Image class="w-10 h-10 rounded-full" src={N5553} alt="N5553" />
       </a>
     </div>
     <div class="flex lg:hidden">
@@ -47,7 +48,7 @@ import NavMenu from "../components/NavMenu.astro"
     </div>
     <div class="hidden lg:flex lg:flex-1 lg:justify-end">
       <a href="#" class="text-sm font-semibold leading-6 text-gray-900"
-        >Log in <span aria-hidden="true">&rarr;</span></a
+        ><span aria-hidden="true">&rarr;</span></a
       >
     </div>
   </nav>

@@ -1,12 +1,13 @@
 ---
+import Nav from "../components/nav.astro";
+import { ViewTransitions } from "astro:transitions";
+
 interface Props {
   title: string;
   class: string;
 }
 
 const { title } = Astro.props;
-import Nav from "../components/nav.astro";
-import { ViewTransitions } from "astro:transitions";
 ---
 
 <!doctype html>
@@ -15,7 +16,7 @@ import { ViewTransitions } from "astro:transitions";
     <meta charset="UTF-8" />
     <meta name="description" content="Astro description" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link class="rounded-full" rel="icon"  href="/img/N5553.png" />
     <meta name="generator" />
     <title>{title}</title>
     <ViewTransitions />
