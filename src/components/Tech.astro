@@ -1,37 +1,30 @@
 ---
 import Card from "./Card.astro";
+import { Image } from "astro:assets";
+
+
+import ASTRO from "/public/img/Tecnology/astro.png";
+import LARAVEL from "/public/img/Tecnology/laravel.png";
+import JS from "/public/img/Tecnology/JS.png";
+import CSS from "/public/img/Tecnology/CSS.png";
+import HTML from "/public/img/Tecnology/HTML.png";
+import APHP from "/public/img/Tecnology/PHP.png";
+import GIT from "/public/img/Tecnology/git.png";
+import GitHub from "/public/img/Tecnology/GitHub.png";
+import Tailwind from "/public/img/Tecnology/tailwind.png";
 
 const technologies = [
-  {
-    title: "ASTRO",
-    body: "Framework frontend",
-    logoUrl: "/img/Tecnology/astro.png",
-  },
-  {
-    title: "LARAVEL",
-    body: "Framework backend",
-    logoUrl: "/img/Tecnology/laravel.png",
-  },
-  { title: "JS", body: "Lenguaje frontend", logoUrl: "/img/Tecnology/JS.png" },
-  { title: "CSS", body: "Estilos web", logoUrl: "/img/Tecnology/CSS.png" },
-  { title: "HTML", body: "Estructura web", logoUrl: "/img/Tecnology/HTML.png" },
-  { title: "PHP", body: "Lenguaje backend", logoUrl: "/img/Tecnology/PHP.png" },
-  {
-    title: "GIT",
-    body: "Control de versiones",
-    logoUrl: "/img/Tecnology/git.png",
-  },
-  {
-    title: "GitHub",
-    body: "Repositorio de código",
-    logoUrl: "/img/Tecnology/GitHub.png",
-  },
-  {
-    title: "Tailwind",
-    body: "Framework CSS",
-    logoUrl: "/img/Tecnology/tailwind.png",
-  },
+{title: "ASTRO", body: "Framework frontend", logoUrl: ASTRO,},
+{title: "LARAVEL", body: "Framework backend", logoUrl: LARAVEL,},
+  { title: "JS", body: "Lenguaje frontend", logoUrl: JS },
+  { title: "CSS", body: "Estilos web", logoUrl: CSS },
+  { title: "HTML", body: "Estructura web", logoUrl: HTML },
+  { title: "PHP", body: "Lenguaje backend", logoUrl: APHP },
+  { title: "GIT", body: "Control de versiones", logoUrl: GIT },
+  { title: "GitHub", body: "Repositorio de código", logoUrl: GitHub },
+  { title: "Tailwind", body: "Framework CSS", logoUrl: Tailwind },
 ];
+
 ---
 
 <div class="text-center mt-64">
@@ -47,7 +40,7 @@ const technologies = [
         technologies.map((tech) => (
           <li class="splide__slide flex justify-center items-center">
             <div class="relative group">
-              <img src={tech.logoUrl} alt={tech.title} class="w-16 h-16" />
+              <Image src={tech.logoUrl} alt={tech.title} class="w-16 h-16" />
               <span class="absolute bottom-0 translate-y-full opacity-0 text-center text-white text-sm bg-gray-800 px-2 py-1 rounded transition-opacity duration-200 group-hover:opacity-100">
                 {tech.title}
               </span>

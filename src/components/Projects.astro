@@ -4,90 +4,58 @@ import Ikarus from "/public/img/Projectos/portada-ikarus.jpeg";
 import G3 from "/public/img/Projectos/G3-GAMES.jpg";
 import PORTAFOLIO from "/public/img/Projectos/Portafolio.jpg";
 import PLACEHOLDER from "/public/img/Tecnology/astro.png";
+
+const project = [
+  { 
+    title: "TECNO-PRO", 
+    body: "Necesidad de implementar un método informático que permita diligenciar y facilitar la gestión de proyectos tanto de semilleros como proyectos de grado", 
+    photo: Ikarus 
+  },
+  { 
+    title: "G3-GAMES", 
+    body: "Esta plataforma tiene como objetivo proporcionar información detallada sobre videojuegos. Los usuarios podrán acceder a una variedad de información, calificaciones, géneros y plataformas, lo que les permitirá explorar el panorama actual de los videojuegos de manera integral.", 
+    photo: G3 
+  },
+  { 
+    title: "PORTAFOLIO", 
+    body: "Estudió actualmente Ingeniería de Sistema, poseo los conocimientos fundamentales para desarrollar actividades asignadas en el área de tecnología, manejo habilidades ofimáticas y facilidad de aprendizaje para nuevos softwares.", 
+    photo: PORTAFOLIO 
+  },
+  { 
+    title: "TIC-TAC-TOE", 
+    body: "Este es un proyecto de muestra para el juego Tic-Tac-Toe, diseñado como un placeholder para futuros proyectos.", 
+    photo: PLACEHOLDER 
+  }
+];
 ---
+<div class="text-center mt-64">
+  <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl mb-12">
+    PROYECTOS
+  </h1>
+</div>
 
-
-<div class="mt-32 flex justify-center items-center p-32">
+<div class="mt-32 flex justify-center items-center">
   <div class="grid lg:grid-cols-2 gap-16">
-
-
-    <!-- IKARUS PROJECY -->
-    <div class="flex flex-col justify-center items-center shadow-lg border border-black rounded-md">
-      <div class="w-full h-96  rounded-md">
-        <Image
-          class="w-full h-full object-cover rounded-t-md"
-          src={Ikarus}
-          alt="Proyecto Ikarus"
-        />
-      </div>
-      <div class="w-full h-32 bg-slate-100 rounded-b-md p-4 border border-t-black">
-        <h1 class="font-bold text-xl">TECNO-PRO</h1>
-        <p>
-          Necesidad de implementar un método informático que permita diligenciar
-          y facilitar la gestión de proyectos tanto de semilleros como proyectos
-          de grado
-        </p>
-      </div>
-    </div>
-
-    <!-- G3 GAMES PROJECT -->
-
- 
-          <div class="flex flex-col justify-center items-center shadow-lg border border-black rounded-md">
-            <div class="w-full h-96  rounded-md">
-              <Image
-                class="w-full h-full object-cover rounded-t-md"
-                src={G3}
-                alt="Proyecto Ikarus"
-              />
-            </div>
-            <div class="w-full h-32 bg-slate-100 rounded-b-md p-4 border border-t-black">
-              <h1 class="font-bold text-xl">G3-GAMES</h1>
-              <p>
-                Esta plataforma tiene como objetivo proporcionar información
-                detallada sobre videojuegos. Los usuarios podrán acceder a una variedad de
-                información, calificaciones, géneros y plataformas,
-                lo que les permitirá explorar el panorama actual de los videojuegos de
-                manera integral.
-              </p>
+    {
+      project.map((item) => (
+        <div class="flex flex-col justify-center items-center shadow-lg border border-black rounded-md relative group">
+          {/* Imagen de fondo */}
+          <div class="w-full h-96 rounded-md overflow-hidden relative">
+            <Image
+              class="w-full h-full object-cover rounded-md transition-opacity duration-300 group-hover:opacity-50"
+              src={item.photo}
+              alt={item.title}
+            />
+            {/* Capa de texto sobre la imagen */}
+            <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-end p-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <h1 class="font-bold text-xl">{item.title}</h1>
+              <p class="text-sm">{item.body}</p>
             </div>
           </div>
-          
-          <!-- Portafolios -->
-          <div class="flex flex-col justify-center items-center shadow-lg border border-black rounded-md">
-            <div class="w-full h-96  rounded-md">
-              <Image
-                class="w-full h-full object-cover rounded-t-md"
-                src={PORTAFOLIO}
-                alt="Proyecto Ikarus"
-              />
-            </div>
-            <div class="w-full h-32 bg-slate-100 rounded-b-md p-4 border border-t-black">
-              <h1 class="font-bold">PORTAFOLIO</h1>
-              <p>
-                Estudió actualmente Ingeniería de Sistema, poseo los conocimientos
-                fundamentales para desarrollar actividades asignadas en el área de
-                tecnología, manejo habilidades ofimáticas y facilidad de aprendizaje
-                para nuevos softwares.
-              </p>
-            </div>
-          </div>
-            <!-- TIC-TAC-TOE  -->
-            <div class="flex flex-col justify-center items-center shadow-lg border border-black rounded-md">
-                <div class="w-full h-96  rounded-md">
-                  <Image
-                    class="w-full h-full object-cover rounded-t-md"
-                    src={PLACEHOLDER}
-                    alt="Proyecto Ikarus"
-                  />
-                </div>
-                <div class="w-full h-32 bg-slate-100 rounded-b-md p-4 border border-t-black">
-                  <h1 class="font-bold">PLACE HOLDER</h1>
-                  <p>
-                    PLACE HOLDER
-                  </p>
-                </div>
-              </div>
-    </div>
+        </div>
+      ))
+    }
   </div>
 </div>
+
+    

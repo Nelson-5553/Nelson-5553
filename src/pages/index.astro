@@ -6,14 +6,16 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Nelson" class="some-class">
-
+  <div class="w-full h-full max-w-6xl mx-auto p-6 sm:p-12">
   <!-- Imagen de portada -->
   <Perfil alt="Hola" />
+  <br><br>
+  <br><br>
    <!-- Seccion de Habiliedades -->
     <Tech />
   <!-- Projects si deseas -->
-  <div class="w-full h-full max-w-md mx-auto p-6 sm:p-12">
-    <Projects />
-  </div>
+  
+     <Projects />
+  </div> 
   
 </Layout>
