@@ -6,6 +6,17 @@ interface Props {
 const {Name, Ruta} = Astro.props
 ---
 
-<a href={Ruta} class="text-sm font-semibold leading-6 text-gray-900" data-astro-prefech="tap"
-        >{Name}</a
-      >
+<div class="group p-1 rounded-lg">
+  <a 
+    href={Ruta} 
+    class="text-sm font-semibold leading-6 text-gray-900 relative p-1 transition-colors duration-300 ease-in-out 
+           group-hover:text-purple-400" 
+    data-astro-prefetch="tap"
+  >
+    {Name}
+    <!-- Pseudo-elemento para el borde -->
+    <span class="absolute inset-x-0 -bottom-1 left-1/2 h-0.5 w-0 bg-purple-400 transition-all duration-300 ease-in-out transform -translate-x-1/2 group-hover:w-full"></span>
+  </a>
+</div>
+
+
