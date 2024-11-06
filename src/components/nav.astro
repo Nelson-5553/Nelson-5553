@@ -5,7 +5,7 @@ import NavMenu from "../components/NavMenu.astro"
 ---
 
 <header class="absolute inset-x-0 top-0 z-50">
-  <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
+  <nav class="fixed flex items-center justify-between w-full p-6 lg:px-8" aria-label="Global">
     <div class="flex lg:flex-1">
       <a href="#" class="-m-1.5 p-1.5">
         <span class="sr-only">Your Company</span>
@@ -26,7 +26,7 @@ import NavMenu from "../components/NavMenu.astro"
       </button>
     </div>
     <div class="hidden lg:flex lg:gap-x-12">
-      <NavMenu Ruta="#sobre-m" Name="Sobre mi" />
+      <NavMenu Ruta="#sobre-mi" Name="Sobre mi" />
       <NavMenu Ruta="#estudios" Name="Estudios" />
       <NavMenu Ruta="#habilidades" Name="Habilidades" />
       <NavMenu Ruta="#proyecto" Name="Proyectos" />
