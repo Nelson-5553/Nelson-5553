@@ -23,31 +23,49 @@ import Contact from "../components/Contact.astro";
   <!-- CONTACTAME -->
     <!-- <Contact/> -->
 
-    <div class="container mx-auto flex flex-col md:flex-row gap-6">
+    <div class="container grid grid-cols-4 mx-auto gap-2">
       <!-- Slot A -->
-      <div data-swapy-slot="a">
+      <div data-swapy-slot="a" class="col-span-1">
         <!-- Item A -->
-        <div data-swapy-item="a" class="text-center bg-white shadow-md rounded-lg p-4 flex-1">
+        <div data-swapy-item="a" class="text-center bg-red-500 shadow-md rounded-lg p-4 flex-1">
           <div class="text-xl font-bold text-gray-800">A</div>
         </div>
       </div>
-  
+    
       <!-- Slot B -->
-      <div data-swapy-slot="b" >
+      <div data-swapy-slot="b" class="col-span-2">
         <!-- Item B -->
-        <div data-swapy-item="b" class="text-center bg-white shadow-md rounded-lg p-4 flex-1">
+        <div data-swapy-item="b" class="text-center bg-blue-500 shadow-md rounded-lg p-4 flex-1">
           <div class="text-xl font-bold text-gray-800">B</div>
         </div>
       </div>
-  
+    
+      <!-- Slot E -->
+      <div data-swapy-slot="e" class="row-span-2 col-span-1">
+        <!-- Item E -->
+        <div data-swapy-item="e" class="text-center bg-yellow-400 shadow-md rounded-lg p-4 flex-1 h-full">
+          <div class="text-xl font-bold text-gray-800">E</div>
+        </div>
+      </div>
+    
       <!-- Slot C -->
-      <div data-swapy-slot="c">
+      <div data-swapy-slot="c" class="col-span-2">
         <!-- Item C -->
-        <div data-swapy-item="c" class="text-center bg-white shadow-md rounded-lg p-4 flex-1">
+        <div data-swapy-item="c" class="text-center bg-green-500 shadow-md rounded-lg p-4 flex-1">
           <div class="text-xl font-bold text-gray-800">C</div>
         </div>
       </div>
+    
+      <!-- Slot D -->
+      <div data-swapy-slot="d" class="col-span-1">
+        <!-- Item D -->
+        <div data-swapy-item="d" class="text-center bg-orange-500 shadow-md rounded-lg p-4 flex-1">
+          <div class="text-xl font-bold text-gray-800">D</div>
+        </div>
+      </div>
     </div>
+    
+    
 
     <script>
       import { createSwapy } from 'swapy'
@@ -55,8 +73,8 @@ import Contact from "../components/Contact.astro";
 const container = document.querySelector('.container') as HTMLElement
 
 const swapy = createSwapy(container, {
-  animation: 'dynamic'
-  // swapMode: 'drop',
+  animation: 'dynamic',
+  swapMode: 'drop',
   // autoScrollOnDrag: true,
   // enabled: true,
   // dragAxis: 'x',
