@@ -2,80 +2,67 @@
 import { Image } from 'astro:assets';
 import myImage from "/public/img/NELSON.jpg";
 import Layout from "../layouts/Layout.astro";
-
 ---
 
 <Layout title="Nelson" class="some-class">
-
-
-
-    <div class="container grid grid-cols-4 w-[60rem] h-[32rem] gap-2">
-      <!-- Slot A -->
-      <div data-swapy-slot="a" class="col-span-1 z-20">
-        <!-- Item A -->
-        <div data-swapy-item="a" class="text-center w-full h-full bg-red-600 shadow-md rounded-lg ">
-          <div class="text-xl font-bold text-gray-800">
-            <div class="object-cover flex items-center justify-center mb-6 md:mb-0">
-              <Image 
-                src={myImage} 
-                alt="Nelson" 
-                class="w-32 h-32 rounded-lg object-cover"
-                loading="eager" 
-              />
-            </div>
-
+  <div class="container grid grid-cols-4 w-[60rem] h-[32rem] gap-2">
+    <!-- Slot A -->
+    <div data-swapy-slot="a" class="col-span-1 w-full h-full">
+      <!-- Item A -->
+      <div data-swapy-item="a" class="text-center w-full h-full bg-red-600 shadow-md rounded-lg bg-[url('/img/NELSON.jpg')] bg-cover">
+        <div class="text-xl font-bold text-gray-800">
+          <div class="flex w-54 h-1 items-center justify-center mb-6 md:mb-0">
+          
           </div>
         </div>
       </div>
-    
-      <!-- Slot B -->
-      <div data-swapy-slot="b" class="col-span-2">
-        <!-- Item B -->
-        <div data-swapy-item="b" class="text-center w-full h-full bg-blue-500 shadow-md rounded-lg p-4 flex-1">
-          <div class="text-xl font-bold text-gray-800">B</div>
-        </div>
-      </div>
-    
-      <!-- Slot E -->
-      <div data-swapy-slot="e" class="row-span-2 col-span-1">
-        <!-- Item E -->
-        <div data-swapy-item="e" class="text-center w-full h-full bg-yellow-400 shadow-md rounded-lg p-4 flex-1">
-          <div class="text-xl font-bold text-gray-800">E</div>
-        </div>
-      </div>
-    
-      <!-- Slot C -->
-      <div data-swapy-slot="c" class="col-span-2">
-        <!-- Item C -->
-        <div data-swapy-item="c" class="text-center w-full h-full bg-green-500 shadow-md rounded-lg p-4 flex-1">
-          <div class="text-xl font-bold text-gray-800">C</div>
-        </div>
-      </div>
-    
-      <!-- Slot D -->
-      <div data-swapy-slot="d" class="col-span-1">
-        <!-- Item D -->
-        <div data-swapy-item="d" class="text-center w-full h-full bg-orange-500 shadow-md rounded-lg p-4 flex-1">
-          <div class="text-xl font-bold text-gray-800">D</div>
-        </div>
+    </div>
+
+    <!-- Slot B -->
+    <div data-swapy-slot="b" class="col-span-2">
+      <!-- Item B -->
+      <div data-swapy-item="b" class="text-center w-full h-full bg-blue-500 shadow-md rounded-lg p-4 flex-1">
+        <div class="text-xl font-bold text-gray-800">B</div>
       </div>
     </div>
-    
-    
 
-    <script>
-      import { createSwapy } from 'swapy'
+    <!-- Slot E -->
+    <div data-swapy-slot="e" class="row-span-2 col-span-1">
+      <!-- Item E -->
+      <div data-swapy-item="e" class="text-center w-full h-full bg-yellow-400 shadow-md rounded-lg p-4 flex-1">
+        <div class="text-xl font-bold text-gray-800">E</div>
+      </div>
+    </div>
 
-const container = document.querySelector('.container') as HTMLElement
+    <!-- Slot C -->
+    <div data-swapy-slot="c" class="col-span-2">
+      <!-- Item C -->
+      <div data-swapy-item="c" class="text-center w-full h-full bg-green-500 shadow-md rounded-lg p-4 flex-1">
+        <div class="text-xl font-bold text-gray-800">C</div>
+      </div>
+    </div>
 
-const swapy = createSwapy(container, {
-  animation: 'dynamic',
-  swapMode: 'hover',
-  // autoScrollOnDrag: true,
-  // enabled: true,
-  // dragAxis: 'x',
-  // dragOnHold: true
-})
-    </script>
-    
+    <!-- Slot D -->
+    <div data-swapy-slot="d" class="col-span-1">
+      <!-- Item D -->
+      <div data-swapy-item="d" class="text-center w-full h-full bg-orange-500 shadow-md rounded-lg p-4 flex-1">
+        <div class="text-xl font-bold text-gray-800">D</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    import { createSwapy } from 'swapy'
+
+    const container = document.querySelector('.container') as HTMLElement
+
+    const swapy = createSwapy(container, {
+      animation: 'dynamic',
+      swapMode: 'hover',
+      // autoScrollOnDrag: true,
+      // enabled: true,
+      // dragAxis: 'x',
+      // dragOnHold: true
+    })
+  </script>
 </Layout>
