@@ -1,5 +1,8 @@
 ---
+import { Image } from 'astro:assets';
+import myImage from "/public/img/NELSON.jpg";
 import Layout from "../layouts/Layout.astro";
+
 ---
 
 <Layout title="Nelson" class="some-class">
@@ -8,10 +11,20 @@ import Layout from "../layouts/Layout.astro";
 
     <div class="container grid grid-cols-4 w-[60rem] h-[32rem] gap-2">
       <!-- Slot A -->
-      <div data-swapy-slot="a" class="col-span-1">
+      <div data-swapy-slot="a" class="col-span-1 z-20">
         <!-- Item A -->
-        <div data-swapy-item="a" class="text-center w-full h-full bg-red-500 shadow-md rounded-lg p-4 flex-1">
-          <div class="text-xl font-bold text-gray-800">A</div>
+        <div data-swapy-item="a" class="text-center w-full h-full bg-red-600 shadow-md rounded-lg ">
+          <div class="text-xl font-bold text-gray-800">
+            <div class="object-cover flex items-center justify-center mb-6 md:mb-0">
+              <Image 
+                src={myImage} 
+                alt="Nelson" 
+                class="w-32 h-32 rounded-lg object-cover"
+                loading="eager" 
+              />
+            </div>
+
+          </div>
         </div>
       </div>
     
@@ -57,7 +70,7 @@ const container = document.querySelector('.container') as HTMLElement
 
 const swapy = createSwapy(container, {
   animation: 'dynamic',
-  swapMode: 'drop',
+  swapMode: 'hover',
   // autoScrollOnDrag: true,
   // enabled: true,
   // dragAxis: 'x',
