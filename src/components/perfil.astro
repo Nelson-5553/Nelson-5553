@@ -1,12 +1,13 @@
 ---
+import { ClientRouter } from "astro:transitions";
 import { Image } from 'astro:assets';
 import myImage from "/public/img/NELSON.jpg";
 const { alt = "Nelson", width = "64", height = "64" } = Astro.props;
 ---
-
+<ClientRouter/>
 <div id="sobre-mi"  class="w-screen lg:h-screen">
 <div class="w-full h-full max-w-6xl mx-auto p-6 sm:p-12">
-<div class="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-24 mt-24 md:mt-48">
+<div class="flex flex-col  justify-center items-center gap-6 md:gap-24 mt-24 md:mt-48">
   <!-- Imagen -->
   <div class="rounded-full object-cover z-20 p-3 shadow bg-gradient-to-r from-cyan-500 to-blue-500 flex items-center justify-center mb-6 md:mb-0">
     <Image 
@@ -14,6 +15,7 @@ const { alt = "Nelson", width = "64", height = "64" } = Astro.props;
       alt={alt} 
       class={`w-${width} h-${height} shadow-sm rounded-full object-cover`} 
       loading="eager" 
+      transition:name="perfil"
     />
   </div>
   

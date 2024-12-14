@@ -8,14 +8,16 @@ import Layout from "../layouts/Layout.astro";
    
         <div class="container grid grid-cols-3 w-[48rem] gap-3">
             <!-- Slot A -->
-            <div data-swapy-slot="a" class="col-span-1">
+            <div  class="col-span-1">
                 <!-- Item A -->
-                <div data-swapy-item="a" class="text-center w-full h-52 bg-white shadow-slate-200 shadow-md rounded-lg bg-[url('/img/NELSON.jpg')] bg-cover">
+                 <a href="/sections/personal">
+                <div  class="text-center w-full h-52 bg-white shadow-slate-200 shadow-md rounded-lg bg-[url('/img/NELSON.jpg')] bg-cover"  transition:name="perfil">
                     <div class="text-xl font-bold text-gray-800">
                         <div class="flex w-54 h-1 items-center justify-center mb-6 md:mb-0">
                         </div>
                     </div>
-                </div>
+                  </div>
+                </a>
             </div>
 
             <!-- Slot B -->
@@ -32,8 +34,8 @@ import Layout from "../layouts/Layout.astro";
             <div data-swapy-slot="c" class="col-span-2">
                 <!-- Item C -->
                 <div data-swapy-item="c" class="text-center w-full h-52 bg-white shadow-slate-200  shadow-md rounded-lg p-4 flex-1">
-                  <a href="/sections/Projects">
-                  <div class="text-xl font-bold text-gray-800"  transition:name=`img-proyecto`>PROYECTOS</div>
+                  <a href="/sections/proyectos">
+                  <div class="text-xl font-bold text-gray-800" transition:name=`img-proyecto`>PROYECTOS</div>
                  </a>
                 </div>
             </div>
@@ -50,13 +52,13 @@ import Layout from "../layouts/Layout.astro";
             <div data-swapy-slot="e" class="col-span-3">
                 <!-- Item E -->
                 <div data-swapy-item="e" class="text-center w-full h-52 bg-white shadow-slate-200  shadow-md rounded-lg p-4 flex-1">
-                  <a href="/sections/studies">
+                  <a href="/sections/estudios" transition:name="estudios">
                   <div class="text-xl font-bold text-gray-800">ESTUDIOS</div>
                   </a>
                 </div>
             </div>
         </div>
-
+      </Layout>
     <script>
         import { createSwapy } from 'swapy'
         
@@ -71,4 +73,3 @@ import Layout from "../layouts/Layout.astro";
             // dragOnHold: true
         })
     </script>
-</Layout>
