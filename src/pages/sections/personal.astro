@@ -4,7 +4,7 @@ import myImage from "/public/img/NELSON.jpg";
 import Layout from "../../layouts/Layout.astro";
 const { alt = "Nelson", width = "64", height = "64" } = Astro.props;
 ---
-<Layout title="Nelson" class="some-class">
+<Layout title="Nelson" class="some-class" client:load >
  
 
     <div id="sobre-mi"  class="w-screen lg:h-screen">

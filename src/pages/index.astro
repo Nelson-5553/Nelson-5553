@@ -4,7 +4,7 @@ import myImage from "/img/NELSON.jpg";
 import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title="Nelson" class="some-class">
+<Layout title="Nelson" class="some-class" client:load>
 <div class="w-[48rem]">
   <div class="text-2xl text-center text-white ">
     <strong> BIENVENIDO </strong>
@@ -184,7 +184,8 @@ import Layout from "../layouts/Layout.astro";
 <script>
 import { createSwapy } from "swapy";
 
-document.addEventListener("DOMContentLoaded", () => {
+// Función para inicializar Swapy de manera segura
+function initializeSwapy() {
   const container = document.querySelector(".container") as HTMLElement;
   if (container) {
     createSwapy(container, {
@@ -192,6 +193,20 @@ document.addEventListener("DOMContentLoaded", () => {
       swapMode: "hover",
     });
   }
-});
+}
+
+// Función para manejar la inicialización de Swapy con eventos de Astro
+function setupSwapyWithAstro() {
+  // Inicialización inicial
+  initializeSwapy();
+
+  // Reinicializar Swapy en cada carga de página
+  document.addEventListener('astro:page-load', () => {
+    initializeSwapy();
+  });
+}
+
+// Asegurarse de que Swapy se inicialice después de que el DOM esté completamente cargado
+document.addEventListener("DOMContentLoaded", setupSwapyWithAstro);
 
 </script>
