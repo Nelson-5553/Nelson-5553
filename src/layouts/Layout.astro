@@ -16,23 +16,12 @@ const { title } = Astro.props;
      <meta name="generator" />
      <title>{title}</title>
      <ClientRouter />
-     <style>
-       body, html {
-         margin: 0;
-         padding: 0;
-         height: 100%;
-       }
-     </style>
    </head>
-   <body>
-    <div class="absolute top-0 z-[-2] h-screen w-screen bg-[#000000] bg-[radial-gradient(#ffffff33_1px,#00091d_1px)] bg-[size:20px_20px]"></div>
-     
+   <body class="bg-black bg-[radial-gradient(#ffffff33_1px,#00091d_1px)] bg-[size:20px_20px] bg-fixed min-h-screen">
      <main class="relative min-h-screen">
-       <div class="flex flex-col justify-center items-center h-screen">
-    
+       <div class="flex flex-col justify-center items-center min-h-screen">
           <!-- contenido -->
           <slot />
-
        </div>
      </main>
    </body>
