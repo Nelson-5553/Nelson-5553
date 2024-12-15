@@ -1,7 +1,59 @@
 ---
-import Perfil from "../../components/perfil.astro";
+import { ClientRouter } from "astro:transitions";
+import { Image } from 'astro:assets';
+import myImage from "/public/img/NELSON.jpg";
 import Layout from "../../layouts/Layout.astro";
+const { alt = "Nelson", width = "64", height = "64" } = Astro.props;
 ---
 <Layout title="Nelson" class="some-class">
-    <Perfil/>
+   
+    <ClientRouter/>
+    <div id="sobre-mi"  class="w-screen lg:h-screen">
+    <div class="w-full h-full max-w-6xl mx-auto p-6 sm:p-12">
+    <div class="flex flex-col  justify-center items-center gap-6 md:gap-24 mt-24 md:mt-48">
+      <!-- Imagen -->
+      <div class="rounded-full object-cover z-20 p-3 shadow bg-gradient-to-r from-cyan-500 to-blue-500 flex items-center justify-center mb-6 md:mb-0">
+        <Image 
+          src={myImage} 
+          alt={alt} 
+          class={`w-${width} h-${height} shadow-sm rounded-full object-cover`} 
+          loading="eager" 
+          transition:name="perfil"
+        />
+      </div>
+      
+      <!-- Texto -->
+      <div class="w-full md:w-1/2 text-center md:text-left">
+        <h3 class="text-3xl md:text-4xl font-bold text-white">
+          Hola,<strong> Soy Nelson </strong>
+        </h3>
+        <br />
+        <p class="text-lg leading-8 text-gray-200">
+          Estudió actualmente Ingeniería de Sistema, poseo los conocimientos
+          fundamentales para desarrollar actividades asignadas en el área de
+          tecnología, manejo habilidades ofimáticas y facilidad de aprendizaje
+          para nuevos softwares.
+        </p>
+    
+        <!-- Botones -->
+        <div class="mt-2 md:mt-10 flex flex-col md:flex-row items-center justify-start gap-x-6">
+          <a
+            href="/PDF/HV.pdf"
+            target="_blank"
+            class="rounded-md p-2 transition ease-in-out delay-150 bg-blue-500 text-white hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300"
+          >
+            Curriculum
+          </a>
+          <a
+            href="#contactame"
+            class="text-sm font-semibold leading-6 text-white mt-4 md:mt-0"
+          >
+            Contactame <span aria-hidden="true">→</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+    <!-- w-64 h-64 border border-black shadow-sm rounded-full object-cover -->
 </Layout>
