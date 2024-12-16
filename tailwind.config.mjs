@@ -3,7 +3,7 @@ export default {
 	theme: {
 	  extend: {
 		fontFamily: {
-		  sans: ['Inter', 'sans-serif'], // O reemplaza 'Inter' por tu elección
+			techno: ['Exo 2', 'sans-serif'], // O reemplaza 'Inter' por tu elección
 		},
 	  },
 	},

@@ -1,5 +1,6 @@
 ---
 import { ClientRouter } from 'astro:transitions';
+
 interface Props {
   title: string;
   class: string;
@@ -77,3 +78,11 @@ const { title } = Astro.props;
     </main>
   </body>
 </html>
+<script>
+  import Typed from 'typed.js';
+
+const typed = new Typed('#element', {
+  strings: ['<i>¡Te invito a conocer más a fondo mi trabajo!</i>'],
+  typeSpeed: 25,
+});
+</script>
