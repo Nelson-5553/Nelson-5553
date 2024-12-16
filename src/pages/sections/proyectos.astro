@@ -1,5 +1,12 @@
 ---
 import Layout from "../../layouts/Layout.astro";
+import { getCollection } from "astro:content";
+const projects = await getCollection('projects'); 
+
+// Renderiza cada uno de los proyectos
+
+
+
 ---
 
 <Layout title="Nelson" class="some-class">
@@ -13,7 +20,19 @@ import Layout from "../../layouts/Layout.astro";
           PROYECTOS
         </h1>
       </div>
-
+      {projects.map((project) => (
+        <li class="mb-6">
+          <h2 class="text-2xl font-semibold">{project.data.title}</h2>
+          <div>{project.body}</div>
+          <img src={project.data.img} alt={project.data.title} class="w-full h-auto" />
+          <div class="mt-4">
+            <a href={project.data.page.url} class="text-blue-500 underline">Primary Link</a>
+            <a href={project.data.page.url_1} class="ml-4 text-blue-500 underline">Secondary Link</a>
+            <div class="project-content">
+        </div>
+          </div>
+        </li>
+      ))}
       <div class="mt-16 flex flex-col">
         <div class="flex justify-start items-center text-orange-600 gap-5">
           <div>
@@ -187,7 +206,7 @@ import Layout from "../../layouts/Layout.astro";
           iniciar sesion comentar,puntuar y hasta dar likes dentro de cada juego
         </p>
         <!-- ----------- TENOPRO-------------------- -->
-        <div class="mt-16 flex flex-col">
+        <!-- <div class="mt-16 flex flex-col">
           <div class="flex justify-start items-center gap-5">
             <div>
               <svg
@@ -370,9 +389,9 @@ import Layout from "../../layouts/Layout.astro";
           <div
             class="flex flex-row items-center w-full h-24 text-black dark:text-white bg-white dark:bg-transparent dark:backdrop-blur-sm rounded-b-l p-3 gap-3"
           >
-            <h1>HECHO CON:</h1>
+            <h1>HECHO CON:</h1> -->
             <!-- Laravel -->
-            <svg
+            <!-- <svg
               width="32"
               height="48"
               xmlns="http://www.w3.org/2000/svg"
@@ -382,9 +401,9 @@ import Layout from "../../layouts/Layout.astro";
               <path
                 d="m255.9 59.6.1 1.1v56.6c0 1.4-.8 2.8-2 3.5l-47.6 27.4v54.2c0 1.4-.7 2.8-2 3.5l-99.1 57-.7.4-.3.1c-.7.2-1.4.2-2.1 0l-.4-.1-.6-.3L2 206c-1.3-.8-2.1-2.2-2.1-3.6V32.7l.1-1.1.2-.4.3-.6.2-.4.4-.5.4-.3c.2 0 .3-.2.5-.3L51.6.6c1.3-.8 2.9-.8 4.1 0L105.3 29c.2 0 .3.2.4.3l.5.3c0 .2.2.4.3.5l.3.4.3.6.1.4.2 1v106l41.2-23.7V60.7c0-.4 0-.7.2-1l.1-.4.3-.7.3-.3.3-.5.5-.3.4-.4 49.6-28.5c1.2-.7 2.8-.7 4 0L254 57l.5.4.4.3.4.5.2.3c.2.2.2.5.3.7l.2.3Zm-8.2 55.3v-47l-17.3 10-24 13.7v47l41.3-23.7Zm-49.5 85v-47l-23.6 13.5-67.2 38.4v47.5l90.8-52.3ZM8.2 39.9V200l90.9 52.3v-47.5l-47.5-26.9-.4-.4c-.2 0-.3-.1-.4-.3l-.4-.4-.3-.4-.2-.5-.2-.5v-.6l-.2-.5V63.6L25.6 49.8l-17.3-10Zm45.5-31L12.4 32.8l41.3 23.7 41.2-23.7L53.7 8.9ZM75 157.3l24-13.8V39.8l-17.3 10-24 13.8v103.6l17.3-10ZM202.3 36.9 161 60.7l41.3 23.8 41.3-23.8-41.3-23.8Zm-4.1 54.7-24-13.8-17.3-10v47l24 13.9 17.3 10v-47Zm-95 106 60.6-34.5 30.2-17.3-41.2-23.8-47.5 27.4L62 174.3l41.2 23.3Z"
                 fill="#FF2D20"></path>
-            </svg>
+            </svg> -->
             <!-- PHP -->
-            <svg
+            <!-- <svg
               width="32"
               height="48"
               xmlns="http://www.w3.org/2000/svg"
@@ -393,18 +412,18 @@ import Layout from "../../layouts/Layout.astro";
                 fill="#fff"
                 d="M7.579 10.123h14.204c4.169.035 7.19 1.237 9.063 3.604 1.873 2.367 2.491 5.6 1.855 9.699-.247 1.873-.795 3.71-1.643 5.512a16.385 16.385 0 01-3.392 4.876c-1.767 1.837-3.657 3.003-5.671 3.498a26.11 26.11 0 01-6.254.742h-6.36l-2.014 10.07H0l7.579-38.001m6.201 6.042l-3.18 15.9c.212.035.424.053.636.053h.742c3.392.035 6.219-.3 8.48-1.007 2.261-.742 3.781-3.321 4.558-7.738.636-3.71 0-5.848-1.908-6.413-1.873-.565-4.222-.83-7.049-.795-.424.035-.83.053-1.219.053h-1.113l.053-.053M41.093 0h7.314L46.34 10.123h6.572c3.604.071 6.289.813 8.056 2.226 1.802 1.413 2.332 4.099 1.59 8.056l-3.551 17.649h-7.42L54.979 21.2c.353-1.767.247-3.021-.318-3.763s-1.784-1.113-3.657-1.113l-5.883-.053-4.346 21.783h-7.314L41.093 0M70.412 10.123h14.204c4.169.035 7.19 1.237 9.063 3.604 1.873 2.367 2.491 5.6 1.855 9.699-.247 1.873-.795 3.71-1.643 5.512a16.385 16.385 0 01-3.392 4.876c-1.767 1.837-3.657 3.003-5.671 3.498a26.11 26.11 0 01-6.254.742h-6.36L70.2 48.124h-7.367l7.579-38.001m6.201 6.042l-3.18 15.9c.212.035.424.053.636.053h.742c3.392.035 6.219-.3 8.48-1.007 2.261-.742 3.781-3.321 4.558-7.738.636-3.71 0-5.848-1.908-6.413-1.873-.565-4.222-.83-7.049-.795-.424.035-.83.053-1.219.053H76.56l.053-.053"
               ></path></svg
-            >
+            > -->
             <!-- NextJS -->
 
             <!-- Tailwing CSS -->
-            <svg
+            <!-- <svg
               viewBox="0 0 256 154"
               width="32"
               height="48"
               xmlns="http://www.w3.org/2000/svg"
               preserveAspectRatio="xMidYMid"
-            >
-              <defs
+            > -->
+              <!-- <defs
                 ><linearGradient
                   x1="-2.778%"
                   y1="32%"
@@ -419,8 +438,8 @@ import Layout from "../../layouts/Layout.astro";
               <path
                 d="M128 0C93.867 0 72.533 17.067 64 51.2 76.8 34.133 91.733 27.733 108.8 32c9.737 2.434 16.697 9.499 24.401 17.318C145.751 62.057 160.275 76.8 192 76.8c34.133 0 55.467-17.067 64-51.2-12.8 17.067-27.733 23.467-44.8 19.2-9.737-2.434-16.697-9.499-24.401-17.318C174.249 14.743 159.725 0 128 0ZM64 76.8C29.867 76.8 8.533 93.867 0 128c12.8-17.067 27.733-23.467 44.8-19.2 9.737 2.434 16.697 9.499 24.401 17.318C81.751 138.857 96.275 153.6 128 153.6c34.133 0 55.467-17.067 64-51.2-12.8 17.067-27.733 23.467-44.8 19.2-9.737-2.434-16.697-9.499-24.401-17.318C110.249 91.543 95.725 76.8 64 76.8Z"
                 fill="url(#gradient)"></path></svg
-            >
-          </div>
+            > -->
+          <!-- </div>
 
           <p class="text-black dark:text-white text-lg">
             Este proyecto fue uno en el que estuve trabajando en colaboracion
@@ -428,7 +447,7 @@ import Layout from "../../layouts/Layout.astro";
             gran parte de mi participacion en este proyecto fue en el front-end
             aunque tambien participe en el desarrollo de varios modulos
           </p>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>
