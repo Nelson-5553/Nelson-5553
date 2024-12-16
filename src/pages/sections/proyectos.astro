@@ -21,17 +21,20 @@ const projects = await getCollection('projects');
         </h1>
       </div>
       {projects.map((project) => (
-        <li class="mb-6">
-          <h2 class="text-2xl font-semibold">{project.data.title}</h2>
-          <div>{project.body}</div>
-          <img src={project.data.img} alt={project.data.title} class="w-full h-auto" />
-          <div class="mt-4">
-            <a href={project.data.page.url} class="text-blue-500 underline">Primary Link</a>
-            <a href={project.data.page.url_1} class="ml-4 text-blue-500 underline">Secondary Link</a>
+        
+          <h2 class="text-2xl font-semibold mt-12 prose dark:prose-invert">{project.data.title}</h2>
+       
+          <div class="mt-5 prose dark:prose-invert text-lg max-w-full">{project.body}</div>
+
+          <img src={project.data.img} alt={project.data.title} class="w-full h-auto mt-5" />
+          <div class="mt-5">
+            <span class="bg-orange-100 text-orange-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-orange-900 dark:text-orange-300">
+              <a href={project.data.page.url}>{project.data.title}</a>
+            </span>
             <div class="project-content">
         </div>
           </div>
-        </li>
+        
       ))}
       <div class="mt-16 flex flex-col">
         <div class="flex justify-start items-center text-orange-600 gap-5">
