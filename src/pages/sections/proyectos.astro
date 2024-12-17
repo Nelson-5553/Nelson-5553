@@ -35,8 +35,13 @@ const projects = await getCollection('projects');
             <span class="bg-orange-100 text-orange-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-orange-900 dark:text-orange-300">
               <a href={project.data.page.url}>{project.data.title}</a>
             </span>
-            <div class="project-content">
-        </div>
+            <ul class="flex flex-row justify-start space-x-3">
+              {project.data.technologies.map((tech) => (
+      <li>
+        <img src={tech} alt="Technology" class="h-6 w-6" />
+      </li>
+    ))}
+            </ul>
           </div>
         
       ))}
