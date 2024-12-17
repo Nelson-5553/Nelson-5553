@@ -1,6 +1,7 @@
 ---
-title: G3-GAMESS
+title: G3-GAMES
 img: "/img/Projectos/G3-GAMES.jpg"
+icon: "/img/Projectos/svg/g3.svg"
 page:
   url: https://my-app-sigma-rosy.vercel.app
   url_1: https://g3s-games.vercel.app

@@ -1,6 +1,7 @@
 ---
 title: Tecno Pro
 img: "/img/Projectos/portada-ikarus.jpeg"
+icon: "/img/Projectos/svg/ikarus.svg"
 page:
   url: none
   url_1: none
