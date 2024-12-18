@@ -35,7 +35,7 @@ const projects = await getCollection('projects');
             <ul class="flex flex-row justify-start space-x-3">
               {project.data.technologies.map((tech) => (
       <li>
-        <img src={`/img/technologies/${tech}.svg`} alt="Technology" class="h-8 w-8" />
+        <img src={`/img/technologies/${tech}.svg`} alt="Technology" class="h-8 w-8" loading="eager"/>
       </li>
     ))}
             </ul>

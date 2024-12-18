@@ -2,30 +2,15 @@
 import Card from "../../components/Card.astro";
 import { Image } from "astro:assets";
 
-import ASTRO from "/public/img/Tecnology/astro.png";
-import LARAVEL from "/public/img/Tecnology/laravel.png";
-import JS from "/public/img/Tecnology/JS.png";
-import CSS from "/public/img/Tecnology/CSS.png";
-import HTML from "/public/img/Tecnology/HTML.png";
-import APHP from "/public/img/Tecnology/PHP.png";
-import GIT from "/public/img/Tecnology/git.png";
-import GitHub from "/public/img/Tecnology/GitHub.png";
-import Tailwind from "/public/img/Tecnology/tailwind.png";
+import Layout from "../../layouts/Layout.astro";
 
-const technologies = [
-  { title: "ASTRO", body: "Framework frontend", logoUrl: ASTRO },
-  { title: "LARAVEL", body: "Framework backend", logoUrl: LARAVEL },
-  { title: "JS", body: "Lenguaje frontend", logoUrl: JS },
-  { title: "CSS", body: "Estilos web", logoUrl: CSS },
-  { title: "HTML", body: "Estructura web", logoUrl: HTML },
-  { title: "PHP", body: "Lenguaje backend", logoUrl: APHP },
-  { title: "GIT", body: "Control de versiones", logoUrl: GIT },
-  { title: "GitHub", body: "Repositorio de código", logoUrl: GitHub },
-  { title: "Tailwind", body: "Framework CSS", logoUrl: Tailwind },
-];
 ---
 
-<div
+
+<Layout title="habilidades" class="some class" >
+  <p class="prose dark:prose-invert text-2xl">Hola</p>
+</Layout>
+<!-- <div
   id="habilidades"
   class="bg-fixed backdrop-blur-3xl w-screen lg:h-screen"
   style="background-image: url(https://img.freepik.com/foto-gratis/vista-superior-formas-geometricas-coloridas_23-2148209940.jpg?t=st=1730868858~exp=1730872458~hmac=5022ba0c02b8cdef2199e8c24b7e0846a43dcc2d430c05ff9df844a4b3a7c8aa&w=1380);  background-size: cover; 
@@ -85,8 +70,8 @@ const technologies = [
     </div>
   </div>
 </div>
-</div>
-<script>
+</div> -->
+<!-- <script>
   import Splide from "@splidejs/splide";
   import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
   import "@splidejs/splide/dist/css/splide.min.css";
@@ -112,4 +97,4 @@ const technologies = [
   });
 
   splide.mount({ AutoScroll });
-</script>
+</script> -->

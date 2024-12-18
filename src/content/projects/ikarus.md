@@ -9,6 +9,7 @@ technologies:
   - laravel
   - php
   - tailwindcss
+  - postgresql
   
 ---
 
