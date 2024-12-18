@@ -6,10 +6,10 @@ page:
   url: none
   url_1: none
 technologies:
-  - "/img/technologies/astro.svg"
-  - "/img/technologies/mongodb.svg"
-  - "/img/technologies/nextjs.svg"
-  - "/img/technologies/tailwindcss.svg"
+  - laravel
+  - php
+  - tailwindcss
+  
 ---
 
 La implementación de Ikarus busca atender una problemática

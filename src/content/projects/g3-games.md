@@ -6,10 +6,10 @@ page:
   url: https://my-app-sigma-rosy.vercel.app
   url_1: https://g3s-games.vercel.app
 technologies:
-  - "/img/technologies/astro.svg"
-  - "/img/technologies/mongodb.svg"
-  - "/img/technologies/nextjs.svg"
-  - "/img/technologies/tailwindcss.svg"
+  - astro
+  - mongodb
+  - nextjs
+  - tailwindcss
   
 ---
 

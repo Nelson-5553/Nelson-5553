@@ -21,7 +21,7 @@ const projects = await getCollection('projects');
         </h1>
       </div>
       {projects.map((project) => (
-        <div class="flex justify-start items-center gap-2 mt-12 ">
+        <div class="flex justify-start items-center gap-2 mt-12">
           
           <img src={project.data.icon} alt="Description" class="w-8 h-8"/>
         
@@ -30,22 +30,24 @@ const projects = await getCollection('projects');
         </div>
           <div class="mt-5 prose dark:prose-invert text-lg max-w-full">{project.body}</div>
 
-          <img src={project.data.img} alt={project.data.title} class="w-full h-auto mt-5" />
-          <div class="mt-5">
-            <span class="bg-orange-100 text-orange-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-orange-900 dark:text-orange-300">
-              <a href={project.data.page.url}>{project.data.title}</a>
-            </span>
+          <img src={project.data.img} alt={project.data.title} class="w-full h-auto mt-5 rounded-t-lg" />
+          <div class="w-full backdrop-blur-sm bg-white/10 h-16 p-4 rounded-b-lg">
             <ul class="flex flex-row justify-start space-x-3">
               {project.data.technologies.map((tech) => (
       <li>
-        <img src={tech} alt="Technology" class="h-6 w-6" />
+        <img src={`/img/technologies/${tech}.svg`} alt="Technology" class="h-8 w-8" />
       </li>
     ))}
             </ul>
           </div>
+          <div class="mt-5">
+            <span class="bg-orange-100 text-orange-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-orange-900 dark:text-orange-300">
+              <a href={project.data.page.url}>{project.data.title}</a>
+            </span>
+          </div>
         
       ))}
-   
+   <br><br><br>
       </div>
     </div>
   </div>
