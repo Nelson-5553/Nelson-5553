@@ -3,6 +3,7 @@ import { Image } from 'astro:assets';
 import myImage from "/public/img/NELSON.jpg";
 import Layout from "../../layouts/Layout.astro";
 const { alt = "Nelson", width = "64", height = "64" } = Astro.props;
+import Card from '../../components/Card.astro';
 ---
 <Layout title="Nelson" class="some-class">
  
@@ -53,6 +54,10 @@ const { alt = "Nelson", width = "64", height = "64" } = Astro.props;
             Contactame <span aria-hidden="true">→</span>
           </a>
         </div>
+      <div class="prose dark:prose-invert text-left text-lg mt-8">
+        <p>Si quieres comocer mas sobre mi te invito a que sigas navegando atravez de mi portafolio</p>
+        <Card title="" body="" logoUrl="" ruta=""/>
+      </div>
       </div>
     </div>
     </div>

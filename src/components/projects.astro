@@ -1,17 +1,33 @@
- <!-- Slot C -->
- <div data-swapy-slot="c" class="col-span-2">
-    <!-- Item C -->
-    <div
-      data-swapy-item="c"
-      class="text-center w-full h-52 bg-white shadow-black dark:shadow-slate-200 shadow-md rounded-lg p-4 flex-1"
-    >
-    <div
-    class="text-xl font-bold text-gray-800"
-    transition:name=`img-proyecto`
-    >
-    <a href="/sections/proyectos">
-          PROYECTOS
-        </div>
+--- 
+import Image from "astro/components/Image.astro"; 
+import Calendar from "/public/img/calendar.webp"; 
+import CalendarWhite from "/public/img/calendar-white.webp"; 
+--- 
+<!-- Slot C -->
+<div data-swapy-slot="c" class="col-span-2">
+  <!-- Item C -->
+  <div
+    data-swapy-item="c"
+    class="text-center w-full h-52 bg-white shadow-black dark:shadow-slate-200 shadow-md rounded-lg p-4 flex-1"
+  >
+  <!-- PROYECTOS  -->
+    <div class="relative text-xl font-bold text-gray-800" transition:name=`img-proyecto`>
+      <div class="absolute inset-0 w-full h-full">
+        <a href="/sections/proyectos"> 
+        <Image 
+          src={Calendar} 
+          alt="Nuevo" 
+          class="rounded-lg hidden dark:block object-cover  w-full h-44"
+          transition:name=`img-calendarr`
+        />
+        <Image 
+          src={CalendarWhite} 
+          alt="Nuevo" 
+          class="rounded-lg dark:hidden object-cover w-full h-44"
+          transition:name=`img-calendarWhite`
+        />
       </a>
+      </div>
     </div>
   </div>
+</div>
