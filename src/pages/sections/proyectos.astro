@@ -1,7 +1,4 @@
 ---
-import Image from "astro/components/Image.astro";
-import Calendar from "/public/img/calendar.webp"
-import CalendarWhite from "/public/img/calendar-white.webp"
 import Layout from "../../layouts/Layout.astro";
 import { getCollection } from "astro:content";
 const projects = await getCollection('projects'); 
@@ -20,10 +17,7 @@ const projects = await getCollection('projects');
           PROYECTOS
         </h1>
       </div>
-      <div>
-        <Image src={Calendar} alt="Nuevo" class="rounded-lg hidden dark:block" transition:name=`img-calendarr`/>
-        <Image src={CalendarWhite} alt="Nuevo" class="rounded-lg  dark:hidden" transition:name=`img-calendarWhite`/>
-      </div>
+      
       {projects.map((project) => (
         <div class="flex justify-start items-center gap-2 mt-12">
           
