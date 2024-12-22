@@ -3,6 +3,7 @@ const technologies = [
   { title: "ASTRO", body: "Framework frontend", logoUrl: "/img/technologies/astro.svg" },
   { title: "LARAVEL", body: "Framework backend", logoUrl: "/img/technologies/laravel.svg" },
   { title: "Tailwind", body: "Framework CSS", logoUrl: "/img/technologies/tailwindcss.svg" },
+  { title: "NEXT", body: "Framework", logoUrl: "/img/technologies/nextjs.svg" },
 ];
 ---
 
@@ -51,16 +52,16 @@ const technologies = [
     const splide = new Splide("#techCarousel", {
       type: "loop",
       drag: "free",
-      perPage: 8,
+      perPage: 3,
       gap: "5rem",
       arrows: false,
       pagination: false,
       autoScroll: {
-        speed: 1,
+        speed: 4,
       },
       breakpoints: {
         1024: {
-          perPage: 4,
+          perPage: 3,
         },
         768: {
           perPage: 3,
