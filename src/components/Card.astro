@@ -5,27 +5,25 @@ import { Image } from 'astro:assets';
 interface Props {
   title: string;
   body: string;
-  logoUrl: string;
+  logoUrl: string; // Debe contener una imagen importada o una URL válida
+  ruta: string;
 }
 
-const { title, body, logoUrl } = Astro.props;
+const { title, body, logoUrl, ruta } = Astro.props;
 ---
 
-  <Atropos>
-    <div class="flex flex-row justify-center items-center bg-white shadow-lg w-52 sm:w-64 h-auto border border-gray-300 rounded-lg p-4 space-x-4 transition-transform duration-200 hover:shadow-2xl hover:scale-105" data-atropos-offset="5">
-      <div>
-        <!--  @ts-ignore -->
-        <Image src={logoUrl} alt="Technology Logo" class="w-12 h-12" />
-      </div>
-      <div>
-        <h2 class="font-semibold text-base sm:text-lg">
-          {title}
-        </h2>
-        <p class="text-sm sm:text-base text-gray-600">
-          {body}
-        </p>
-      </div>
+<Atropos>
+  <div class="flex flex-row justify-center items-center bg-white shadow-lg  h-auto border border-gray-300 rounded-lg p-4 space-x-4" data-atropos-offset="5">
+    <div>
+      <!-- <Image src={logoUrl} alt="Technology Logo" class="w-12 h-12" /> -->
     </div>
-    
-      </Atropos>
+    <div>
+      <h2 class="font-semibold text-base sm:text-lg">
+        {title}
+      </h2>
+      <a href={ruta}> {body}</a>
+    </div>
+  </div>
+</Atropos>
+
 
