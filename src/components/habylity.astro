@@ -1,3 +1,11 @@
+---
+const technologies = [
+  { title: "ASTRO", body: "Framework frontend", logoUrl: "/img/technologies/astro.svg" },
+  { title: "LARAVEL", body: "Framework backend", logoUrl: "/img/technologies/laravel.svg" },
+  { title: "Tailwind", body: "Framework CSS", logoUrl: "/img/technologies/tailwindcss.svg" },
+];
+---
+
 <!-- Slot B -->
 <div data-swapy-slot="b" class="col-span-2">
     <!-- Item B -->
@@ -9,7 +17,66 @@
         <div class="text-xl font-bold text-gray-800" transition:name=`img-habilities`>
           <a href="/sections/habilities"> HABILIDADES
           </a>
+        <div class="mt-9">
+          <div class="splide" id="techCarousel">
+            <div class="splide__track">
+              <ul class="splide__list">
+                {
+                  technologies.map((tech) => (
+                    <li class="splide__slide flex justify-center items-center">
+                      <div class="relative group">
+                        <img
+                          src={tech.logoUrl}
+                          alt={tech.title}
+                          class="w-16 h-16"
+                        />
+                      </div>
+                    </li>
+                  ))
+                }
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
       </a>
     </div>
   </div>
+
+  <script>
+    import Splide from "@splidejs/splide";
+    import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
+    import "@splidejs/splide/dist/css/splide.min.css";
+  function Carrusel (){
+    const splide = new Splide("#techCarousel", {
+      type: "loop",
+      drag: "free",
+      perPage: 8,
+      gap: "5rem",
+      arrows: false,
+      pagination: false,
+      autoScroll: {
+        speed: 1,
+      },
+      breakpoints: {
+        1024: {
+          perPage: 4,
+        },
+        768: {
+          perPage: 3,
+        },
+      },
+    });
+  
+    splide.mount({ AutoScroll });
+  }
+  // Initial theme setup
+Carrusel();
+
+
+// Handle theme persistence during Astro view transitions
+document.addEventListener('astro:page-load', () => {
+  Carrusel();
+});
+
+  </script>
