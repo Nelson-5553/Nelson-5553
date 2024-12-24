@@ -1,4 +1,13 @@
 ---
+import { Image } from "astro:assets";
+import g3 from "/public/img/Projectos/svg/g3.svg";
+import ikarus from "/public/img/Projectos/svg/ikarus.svg";
+
+const icon = [
+  { name: "G3", img: g3 },
+  { name: "Ikarus", img: ikarus },
+];
+
 
 ---
 
@@ -12,6 +21,16 @@
     <!-- PROYECTOS  -->
     <div class="text-xl font-bold text-gray-800" transition:name=`img-proyecto`>
       <a href="/sections/proyectos"> PROYECTO </a>
+
+      <div class="flex justify-center items-center gap-12">
+      {icon.map((project) => (
+        <div class = "" >
+          <Image src={project.img} alt={project.name} class="w-32 h-32"/>
+        </div>
+        ))}
+      </div>
+      
+
     </div>
   </div>
 </div>
