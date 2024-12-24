@@ -18,13 +18,11 @@ const technologies = [
         <div class="text-xl font-bold text-gray-800" transition:name=`img-habilities`>
           <a href="/sections/habilities"> HABILIDADES
           </a>
-        <div class="mt-9">
-          <div class="splide" id="techCarousel">
-            <div class="splide__track">
-              <ul class="splide__list">
+        <div class="flex flex-row justify-center space-x-8  mt-9">
+        
                 {
                   technologies.map((tech) => (
-                    <li class="splide__slide flex justify-center items-center">
+                    <li class="flex justify-center items-center">
                       <div class="relative group">
                         <img
                           src={tech.logoUrl}
@@ -35,49 +33,10 @@ const technologies = [
                     </li>
                   ))
                 }
-              </ul>
-            </div>
-          </div>
+            
         </div>
       </div>
       </a>
     </div>
   </div>
 
-  <script>
-    import Splide from "@splidejs/splide";
-    import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
-    import "@splidejs/splide/dist/css/splide.min.css";
-  function Carrusel (){
-    const splide = new Splide("#techCarousel", {
-      type: "loop",
-      drag: "free",
-      perPage: 3,
-      gap: "5rem",
-      arrows: false,
-      pagination: false,
-      autoScroll: {
-        speed: 2,
-      },
-      breakpoints: {
-        1024: {
-          perPage: 3,
-        },
-        768: {
-          perPage: 3,
-        },
-      },
-    });
-  
-    splide.mount({ AutoScroll });
-  }
-  // Initial theme setup
-Carrusel();
-
-
-// Handle theme persistence during Astro view transitions
-document.addEventListener('astro:page-load', () => {
-  Carrusel();
-});
-
-  </script>
