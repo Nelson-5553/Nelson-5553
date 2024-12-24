@@ -3,128 +3,83 @@ import Card from "../../components/Card.astro";
 import { Image } from "astro:assets";
 
 import Layout from "../../layouts/Layout.astro";
-
+import Nav from "../../components/nav.astro";
 ---
 
-
-<Layout title="habilidades" class="some class" >
-  <div class="prose dark:prose-invert w-full">
-    <h1 class="text-4xl text-left" transition:name=`img-habilities`>
-      HABILIDADES
-    </h1>
-    <p class="text-lg">
-      A lo largo de mi trayectoria, he tenido la oportunidad de trabajar con una variedad de herramientas y tecnologías que me han ayudado a construir proyectos sólidos y funcionales.
-      <br><br>
-      Desde Frameworks
-    </p>
-  <div class="flex flex-row space-x-4">
-    <img src="/img/technologies/astro.svg" alt="Tecnologias" class="w-12 h-12">
-    <img src="/img/technologies/laravel.svg" alt="Tecnologias" class="w-12 h-12">
-    <img src="/img/technologies/nextjs.svg" alt="Tecnologias" class="w-12 h-12">
-  </div>
-    <p>
-      Habilidades Fundamentales
-    </p>
-  <div class="flex flex-row space-x-4">
-    <img src="/img/technologies/html5.svg" alt="Tecnologias" class="w-12 h-12">
-    <img src="/img/technologies/css.svg" alt="Tecnologias" class="w-12 h-12">
-    <img src="/img/technologies/javascript.svg" alt="Tecnologias" class="w-12 h-12">
-  </div>
-    <p>
-      Bases de datos
-    </p>
-  <div class="flex flex-row space-x-4">
-    <img src="/img/technologies/mysql.svg" alt="Tecnologias" class="w-12 h-12">
-    <img src="/img/technologies/postgresql.svg" alt="Tecnologias" class="w-12 h-12">
-    <img src="/img/technologies/mongodb.svg" alt="Tecnologias" class="w-12 h-12">
-  </div>
+<Layout title="habilidades" class="some class">
+  <div class="w-screen lg:h-screen overflow-x-hidden">
+    <div class="w-full h-full max-w-3xl mx-auto py-12 sm:p-12 prose dark:prose-invert">
+     
+        <Nav
+          name="Proyectos"
+          ruta="/sections/proyectos"
+          name2="Estudios"
+          ruta2="/sections/estudios"
+        />
+        <h1 class="text-4xl  mt-44" transition:name=`img-habilities`>
+          HABILIDADES
+        </h1>
+        <p class="text-lg">
+          A lo largo de mi trayectoria, he tenido la oportunidad de trabajar con
+          una variedad de herramientas y tecnologías que me han ayudado a
+          construir proyectos sólidos y funcionales.
+          <br /><br />
+          Desde Frameworks
+        </p>
+        <div class="flex flex-row space-x-4">
+          <img
+            src="/img/technologies/astro.svg"
+            alt="Tecnologias"
+            class="w-12 h-12"
+          />
+          <img
+            src="/img/technologies/laravel.svg"
+            alt="Tecnologias"
+            class="w-12 h-12"
+          />
+          <img
+            src="/img/technologies/nextjs.svg"
+            alt="Tecnologias"
+            class="w-12 h-12"
+          />
+        </div>
+        <p>Habilidades Fundamentales</p>
+        <div class="flex flex-row space-x-4">
+          <img
+            src="/img/technologies/html5.svg"
+            alt="Tecnologias"
+            class="w-12 h-12"
+          />
+          <img
+            src="/img/technologies/css.svg"
+            alt="Tecnologias"
+            class="w-12 h-12"
+          />
+          <img
+            src="/img/technologies/javascript.svg"
+            alt="Tecnologias"
+            class="w-12 h-12"
+          />
+        </div>
+        <p>Bases de datos</p>
+        <div class="flex flex-row space-x-4">
+          <img
+            src="/img/technologies/mysql.svg"
+            alt="Tecnologias"
+            class="w-12 h-12"
+          />
+          <img
+            src="/img/technologies/postgresql.svg"
+            alt="Tecnologias"
+            class="w-12 h-12"
+          />
+          <img
+            src="/img/technologies/mongodb.svg"
+            alt="Tecnologias"
+            class="w-12 h-12"
+          />
+        </div>
+      </div>
+    </div>
   </div>
 </Layout>
-<!-- <div
-  id="habilidades"
-  class="bg-fixed backdrop-blur-3xl w-screen lg:h-screen"
-  style="background-image: url(https://img.freepik.com/foto-gratis/vista-superior-formas-geometricas-coloridas_23-2148209940.jpg?t=st=1730868858~exp=1730872458~hmac=5022ba0c02b8cdef2199e8c24b7e0846a43dcc2d430c05ff9df844a4b3a7c8aa&w=1380);  background-size: cover; 
-  background-repeat: no-repeat; "
->
-<div class="backdrop-blur-xl w-screen lg:h-screen">
-  <div class="w-full h-full max-w-6xl mx-auto p-6 sm:p-12">
-    <div class="text-center">
-      <h1
-        class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl mb-12"
-      >
-        Habilidades
-      </h1>
-    </div>
-
-    <div class="splide" id="techCarousel">
-      <div class="splide__track">
-        <ul class="splide__list">
-          {
-            technologies.map((tech) => (
-              <li class="splide__slide flex justify-center items-center">
-                <div class="relative group">
-                  <Image
-                    src={tech.logoUrl}
-                    alt={tech.title}
-                    class="w-16 h-16"
-                  />
-                  <span class="absolute bottom-0 translate-y-full opacity-0 text-center text-white text-sm bg-gray-800 px-2 py-1 rounded transition-opacity duration-200 group-hover:opacity-100">
-                    {tech.title}
-                  </span>
-                </div>
-              </li>
-            ))
-          }
-        </ul>
-      </div>
-    </div>
-    <br /><br />
-    <div class="mt-12 text-center w-auto">
-      <p class="text-lg text-gray-700 mb-8">
-        A lo largo de mi trayectoria, he tenido la oportunidad de trabajar con
-        una variedad de herramientas y tecnologías que me han ayudado a
-        construir proyectos sólidos y funcionales.
-
-      </p>
-      
-      <div
-        class="grid gap-6 md:grid-cols-2 xl:grid-cols-3 w-full max-w-md sm:max-w-full place-items-center"
-      >
-        {
-          technologies.map((tech) => (
-            // @ts-ignore
-            <Card title={tech.title} body={tech.body} logoUrl={tech.logoUrl} />
-          ))
-        }
-      </div>
-    </div>
-  </div>
-</div>
-</div> -->
-<!-- <script>
-  import Splide from "@splidejs/splide";
-  import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
-  import "@splidejs/splide/dist/css/splide.min.css";
-  const splide = new Splide("#techCarousel", {
-    type: "loop",
-    drag: "free",
-    focus: "center",
-    perPage: 8,
-    gap: "1rem",
-    arrows: false,
-    pagination: false,
-    autoScroll: {
-      speed: 1,
-    },
-    breakpoints: {
-      1024: {
-        perPage: 4,
-      },
-      768: {
-        perPage: 3,
-      },
-    },
-  });
-
-  splide.mount({ AutoScroll });
-</script> -->

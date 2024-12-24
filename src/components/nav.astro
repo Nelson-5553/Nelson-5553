@@ -1,0 +1,17 @@
+---
+interface Props {
+  name: string;
+  ruta: string;
+  name2: string;
+  ruta2: string;
+}
+
+const { name, ruta, name2, ruta2 } = Astro.props;
+---
+
+<div
+  class="flex justify-between prose dark:prose-invert w-full text-xl font-bold hover:text-slate-500"
+>
+  <a href={ ruta }> ← { name } </a>
+  <a href={ ruta2 }>{ name2 } →</a>
+</div>

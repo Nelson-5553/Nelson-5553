@@ -1,6 +1,7 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import { getCollection } from "astro:content";
+import Nav from "../../components/nav.astro";
 const projects = await getCollection('projects'); 
 
 // Renderiza cada uno de los proyectos
@@ -8,8 +9,9 @@ const projects = await getCollection('projects');
 
 <Layout title="Nelson" class="some-class">
   <div class="w-screen lg:h-screen overflow-x-hidden">
-    <div id="proyecto" class="w-full h-full max-w-3xl mx-auto py-12 sm:p-12">
-      <div class="text-center">
+    <div class="w-full h-full max-w-3xl mx-auto py-12 sm:p-12">
+      <Nav name="¿Quien soy?" ruta="/sections/personal" name2="Habilidades" ruta2="/sections/habilities"/>
+      <div class="text-center mt-32">
         <h1
           class="text-4xl font-bold tracking-tight text-black dark:text-white sm:text-6xl mb-12"
           transition:name=`img-proyecto`
