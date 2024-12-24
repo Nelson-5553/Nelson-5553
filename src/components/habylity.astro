@@ -4,6 +4,8 @@ const technologies = [
   { title: "LARAVEL", body: "Framework backend", logoUrl: "/img/technologies/laravel.svg" },
   { title: "Tailwind", body: "Framework CSS", logoUrl: "/img/technologies/tailwindcss.svg" },
   { title: "NEXT", body: "Framework", logoUrl: "/img/technologies/nextjs.svg" },
+  { title: "Posgress", body: "Framework", logoUrl: "/img/technologies/postgresql.svg" },
+  { title: "Php", body: "Framework", logoUrl: "/img/technologies/mysql.svg" },
 ];
 ---
 
@@ -18,19 +20,20 @@ const technologies = [
         <div class="text-xl font-bold text-gray-800" transition:name=`img-habilities`>
           <a href="/sections/habilities"> HABILIDADES
           </a>
-        <div class="flex flex-row justify-center space-x-8  mt-9">
+        <div class="grid grid-cols-3  justify-center gap-5  mt-4">
         
                 {
                   technologies.map((tech) => (
-                    <li class="flex justify-center items-center">
-                      <div class="relative group">
+                
+                      <div class="flex justify-center">
                         <img
                           src={tech.logoUrl}
                           alt={tech.title}
-                          class="w-16 h-16"
+                          class="w-14 h-14"
                         />
                       </div>
-                    </li>
+
+                    
                   ))
                 }
             
