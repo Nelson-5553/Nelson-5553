@@ -19,11 +19,12 @@ const { title } = Astro.props;
     <title>{title}</title>
     <ClientRouter/>
     <!-- AOSJS -->
-    <script src="/src/js/aos.js"></script>
+    <script src="../js/aos.js"></script>
     <!-- Incluir el script del cambio de tema -->
     <script src="../js/theme-toggle.js"></script>
   </head>
-  <body class="bg-white dark:bg-black dark:bg-[radial-gradient(#ffffff33_1px,#00091d_1px)] dark:bg-[size:20px_20px] bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] bg-[size:20px_20px] bg-fixed min-h-screen transition-colors">
+  <!-- <div class="absolute top-0 z-[-2] h-screen w-screen bg-white bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"></div> -->
+  <body class="bg-white dark:bg-[#101c44] h-screen w-screen bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))] bg-fixed min-h-screen transition-colors">
     <div class="absolute inset-0 -z-10 h-full w-full"></div>
     <main class="relative min-h-screen">
       <div class="absolute top-4 right-8">
