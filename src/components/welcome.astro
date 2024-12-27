@@ -14,3 +14,19 @@
     </p>
   </div>
 </div>
+<script>
+  import Typed from 'typed.js';
+function typedStart() {
+  const typed = new Typed('#element', {
+    strings: ['<i>¡Te invito a conocer más a fondo mi trabajo!</i>'],
+    typeSpeed: 25,
+  });
+}
+
+typedStart();
+
+document.addEventListener('astro:page-load', () => {
+  typedStart();
+});
+
+</script>
