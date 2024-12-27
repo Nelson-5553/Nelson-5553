@@ -7,6 +7,8 @@ import react from '@astrojs/react';
 export default defineConfig({
   prefetch:true,
   integrations: [tailwind(), react()],
-  output: 'static', // Cambia la salida a 'server' para que use serverless en Vercel
-  adapter: vercel(), // Configura el adaptador de Vercel
+  output: 'server', // Cambia la salida a 'server' para que use serverless en Vercel
+  adapter: vercel({ 
+    edgeMiddleware: true,
+  }), // Configura el adaptador de Vercel
 });
