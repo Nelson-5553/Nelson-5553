@@ -11,9 +11,7 @@ export default {
 	},
 	darkMode: 'class',
 	plugins: [
-		require('flowbite/plugin'), // Add Flowbite plugin
 		typography
-
 	],
   };
   

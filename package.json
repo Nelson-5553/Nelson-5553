@@ -19,7 +19,6 @@
     "astro": "^5.0.4",
     "atropos": "^2.0.2",
     "autoprefixer": "^10.4.20",
-    "flowbite": "^2.5.2",
     "postcss": "^8.4.45",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
