@@ -4,21 +4,16 @@ import Calendar from "/public/img/calendar.webp";
 import CalendarWhite from "/public/img/calendar-white.webp";
 import myImage from "/public/img/NELSON.jpg";
 import Layout from "../../layouts/Layout.astro";
-import Nav from "../../components/nav.astro";
 const { alt = "Nelson", width = "64", height = "64" } = Astro.props;
-import Card from "../../components/Card.astro";
 ---
 
 <Layout title="Nelson" class="some-class">
   <div id="sobre-mi" class="w-screen lg:h-screen overflow-x-hidden">
     <div class="w-full h-full max-w-5xl mx-auto p-6 sm:p-12">
       <div class="flex flex-col justify-center items-center gap-6 md:gap-24">
-        <Nav
-          name="Volver"
-          ruta="/"
-          name2="Proyectos"
-          ruta2="/sections/proyectos"
-        />
+      <div class="mt-24 md:mt-4">
+        <span></span>
+      </div>
         <!-- Imagen -->
         <div
           class="rounded-full object-cover z-20 p-3 shadow bg-gradient-to-r from-cyan-500 to-blue-500 flex items-center justify-center mb-6 md:mb-0"

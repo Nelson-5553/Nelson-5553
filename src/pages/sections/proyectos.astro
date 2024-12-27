@@ -1,7 +1,7 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import { getCollection } from "astro:content";
-import Nav from "../../components/nav.astro";
+
 
 // Get all projects
 const projects = await getCollection('projects');
@@ -27,12 +27,6 @@ const createPageURL = (pageNum: number) => {
 <Layout title="Nelson" class="some-class">
   <div class="w-full lg:h-screen overflow-x-hidden sm:px-12">
     <div class="w-full h-full max-w-3xl mx-auto py-12 px-12">
-      <Nav 
-        name="¿Quien soy?" 
-        ruta="/sections/personal" 
-        name2="Habilidades" 
-        ruta2="/sections/habilities"
-      />
       
       <div class="text-center mt-12">
         <h1
