@@ -1,11 +1,22 @@
 ---
 import Layout from "../../layouts/Layout.astro";
+
+const libros = [
+  {
+    title: "Aprendiendo Git y GitHub", img: "https://m.media-amazon.com/images/I/61p6VxskKVL._SL1430_.jpg", link: "https://www.amazon.com/dp/B0D2LPMG6F?ref=ppx_yo2ov_dt_b_fed_asin_title", author: "Miguel Angel Duran"
+  },
+  {
+    title: "Aprendiendo JavaScript", img: "https://m.media-amazon.com/images/I/6137upbz66L._SL1250_.jpg", link: "https://www.amazon.com/dp/B08TZ3HSYZ?ref=ppx_yo2ov_dt_b_fed_asin_title", author: "Carlos Azaustre"
+  },
+  {
+    title: "Aprendiendo React", img: "https://m.media-amazon.com/images/I/61d2i7cnPpL._SL1499_.jpg", link: "https://www.amazon.com/dp/B0CHL7M2LL?ref=ppx_yo2ov_dt_b_fed_asin_title", author: "Carlos Azaustre"
+  },
+]
 ---
 
 <Layout title="Nelson" class="some-class">
   <div class="w-full lg:h-screen overflow-x-hidden sm:px-12">
     <div class="w-full h-full max-w-3xl mx-auto py-12 px-12">
-
       <div class="text-center mt-32">
         <h1
           class="text-4xl font-bold tracking-tight prose dark:prose-invert sm:text-6xl mb-12"
@@ -13,7 +24,21 @@ import Layout from "../../layouts/Layout.astro";
         >
           Trayectoria académica
         </h1>
+        <p class="text-lg font-normal prose dark:prose-invert">
+          En esta sección encontrarás un resumen de mi trayectoria académica,
+          incluyendo los estudios formales que he completado a lo largo de mi
+          vida. Además, he realizado diversos cursos especializados para
+          fortalecer mis habilidades y ampliar mis conocimientos. También he
+          enriquecido mi formación mediante la lectura de libros y la
+          participación en programas de aprendizaje en línea, siempre con el
+          objetivo de seguir creciendo personal y profesionalmente.
+        </p>
+        <br />
+        <br />
+        <br />
       </div>
+      <h1 class="text-2xl font-bold prose dark:prose-invert">Linea de tiempo</h1>
+      <br><br>
 
       <ol class="relative border-s border-black dark:border-gray-700">
         <li class="mb-10 ms-4">
@@ -116,6 +141,27 @@ import Layout from "../../layouts/Layout.astro";
           </p>
         </li>
       </ol>
+      <br><br>
+      <h1 class="text-2xl font-bold prose dark:prose-invert">Libros</h1>
+      <br><br>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+      {
+        libros.map((libro) => (
+        <div class="relative flex justify-center items-center hover:scale-105 transition-transform duration-300 ease-in-out">
+          <a href={libro.link} target="_blank" rel="noopener noreferrer">
+          <img 
+            src={libro.img} 
+            alt={libro.title} 
+            class="w-48 h-64 object-cover" 
+          />
+          </a>
+          </div>
+        ))
+      }
+      </div>
+      <br/>
+  <br/>
+  <br/>
     </div>
   </div>
 </Layout>
