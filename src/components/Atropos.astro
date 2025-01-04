@@ -12,7 +12,7 @@
   import Atropos from "atropos";
   import "atropos/css";
 
-
+  function AtroposFuntion() {
   const elements = document.querySelectorAll('.my-atropos');
 
   elements.forEach((el) => {
@@ -22,4 +22,11 @@
       activeOffset: 40,
     });
   });
+}
+
+AtroposFuntion();
+
+document.addEventListener( 'astro:page-load', () => {
+  AtroposFuntion();
+});
 </script>
