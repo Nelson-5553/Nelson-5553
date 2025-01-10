@@ -1,22 +1,30 @@
 ---
-import Layout from "../../layouts/Layout.astro"
+import Layout from "../../layouts/Layout.astro";
 import { getCollection } from "astro:content";
 
-const experience = await getCollection('experience');
+const experienceEntries = await getCollection("experience");
+
+// Renderizar una entrada específica (puedes iterar para más entradas)
+const renderedExperiences = await Promise.all(
+  experienceEntries.map(async (entry) => {
+    const rendered = await entry.render();
+    return {
+      ...entry,
+      Content: rendered.Content,
+      frontmatter: rendered.remarkPluginFrontmatter,
+    };
+  })
+);
 ---
 
 <Layout title="Experiencia" class="some-class">
+  <div class="w-full lg:h-screen sm:px-12">
+    <div class="max-w-3xl mx-auto py-12 px-4 prose dark:prose-invert">
+      <h1>Experiencia</h1>
 
-    <div class="w-full lg:h-screen overflow-x-hidden sm:px-12">
-        <div class="w-full h-full max-w-3xl mx-auto py-12 px-12 prose dark:prose-invert">
-            <h1 class="text-4xl mt-44" transition:name=`experiences`>
-                EXPERIENCIA
-              </h1>
-
-              <div>
-                {experience.map((exp) => (
-                  <div class="flex flex-col gap-4 p-4">
-                    <!-- Contenedor para imagen y título -->
+      {renderedExperiences.map((exp) => (
+        <div class="mb-8 p-4">
+                              <!-- Contenedor para imagen y título -->
                     <div class="flex items-center gap-4 ">
                       <!-- Imagen -->
                       <div class="w-16 h-16 p-1 dark:bg-zinc-50 rounded-full flex items-center justify-center mt-6">
@@ -33,14 +41,19 @@ const experience = await getCollection('experience');
                           {exp.data.title}
                         </h2>
                       </div>
-                    </div>
-                    <!-- Descripción -->
-                    <p class="text-gray-600 dark:text-gray-300">{exp.body}</p>
-                  </div>
-                ))}
-              </div>
-              
+                    </div>     
+
+          <!-- Contenido renderizado -->
+          <article>
+            <exp.Content />
+          </article>
+
+          <!-- Frontmatter modificado -->
+          <p class="italic ">
+            Periodo: {exp.frontmatter.date || "Fecha no disponible"}
+          </p>
         </div>
+      ))}
     </div>
-    
+  </div>
 </Layout>
