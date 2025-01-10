@@ -1,5 +1,6 @@
 ---
 title: GESTION SALUD IPS
+cargo: Practicante
 img: "/img/Projectos/G3-GAMES.jpg"
 icon: "/img/experience/svg/Gestion.svg"
 color: "bg-orange-100 text-orange-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-orange-900 dark:text-orange-300"
@@ -8,6 +9,12 @@ page:
   url_1: none
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Gestión Salud IPS es una institución prestadora de servicios de salud de alta complejidad en Colombia, comprometida con el bienestar y la satisfacción de sus pacientes. Ofrece una amplia gama de servicios, incluyendo urgencias, unidad de cuidados críticos, servicios quirúrgicos, consulta externa y hemodinamia. Con sedes en ciudades como Cartagena y Santa Marta, se destaca por su infraestructura moderna, tecnología de punta y un equipo humano altamente capacitado, brindando atención personalizada con seguridad y calidez.
 
-Herramientas y Tecnologías Utilizadas
+<!-- ![Texto alternativo](/img/Projectos/Portafolio.jpg) -->
+
+## Herramientas y Tecnologías Utilizadas
+
+- Elemento 1
+- Elemento 2
+- Elemento 3
