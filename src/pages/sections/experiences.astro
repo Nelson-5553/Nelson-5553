@@ -1,35 +1,59 @@
 ---
-import Layout from "../../layouts/Layout.astro"
+import Layout from "../../layouts/Layout.astro";
 import { getCollection } from "astro:content";
 
-const experience = await getCollection('experience');
+const experienceEntries = await getCollection("experience");
+
+// Renderizar una entrada específica (puedes iterar para más entradas)
+const renderedExperiences = await Promise.all(
+  experienceEntries.map(async (entry) => {
+    const rendered = await entry.render();
+    return {
+      ...entry,
+      Content: rendered.Content,
+      frontmatter: rendered.remarkPluginFrontmatter,
+    };
+  })
+);
 ---
 
 <Layout title="Experiencia" class="some-class">
+  <div class="w-full lg:h-screen sm:px-12">
+    <div class="max-w-3xl mx-auto py-12 px-4 prose dark:prose-invert">
+      <h1>Experiencia</h1>
 
-    <div class="w-full lg:h-screen overflow-x-hidden sm:px-12">
-        <div class="w-full h-full max-w-3xl mx-auto py-12 px-12 prose dark:prose-invert">
-            <h1 class="text-4xl mt-44" transition:name=`experiences`>
-                EXPERIENCIA
-              </h1>
+      {renderedExperiences.map((exp) => (
+        <div class="mb-8 p-4">
+                              <!-- Contenedor para imagen y título -->
+                    <div class="flex items-center gap-4 ">
+                      <!-- Imagen -->
+                      <div class="w-16 h-16 p-1 dark:bg-zinc-50 rounded-full flex items-center justify-center mt-6">
+                        <img
+                           src={exp.data.icon}
+                           alt={exp.data.title}
+                           class="w-full h-full object-contain "
+                         />
+                      </div>
 
-              <div>
-                {experience.map((exp)=>(
-                    <div>
-                        <div class="flex justify-start items-center gap-2">
-                            <img src={exp.data.icon} alt="Description" class="w-12 h-12"/>
-                        <h2 class="text-2xl font-semibold prose dark:prose-invert">
-                            {exp.data.title}
+                      <!-- Texto -->
+                      <div>
+                        <h2 class="text-2xl font-semibold dark:text-white">
+                          {exp.data.title}
                         </h2>
+                      </div>
+                    </div>     
 
-                    </div>
-                        <p>{exp.body}</p>
-                
-                    </div>
-                )) 
-                }
-              </div>
+          <!-- Contenido renderizado -->
+          <article>
+            <exp.Content />
+          </article>
+
+          <!-- Frontmatter modificado -->
+          <p class="italic ">
+            Periodo: {exp.frontmatter.date || "Fecha no disponible"}
+          </p>
         </div>
+      ))}
     </div>
-    
+  </div>
 </Layout>
