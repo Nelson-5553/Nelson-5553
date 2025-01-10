@@ -14,21 +14,32 @@ const experience = await getCollection('experience');
               </h1>
 
               <div>
-                {experience.map((exp)=>(
-                    <div>
-                        <div class="flex justify-start items-center gap-2">
-                            <img src={exp.data.icon} alt="Description" class="w-12 h-12"/>
-                        <h2 class="text-2xl font-semibold prose dark:prose-invert">
-                            {exp.data.title}
-                        </h2>
+                {experience.map((exp) => (
+                  <div class="flex flex-col gap-4 p-4">
+                    <!-- Contenedor para imagen y título -->
+                    <div class="flex items-center gap-4 ">
+                      <!-- Imagen -->
+                      <div class="w-16 h-16 p-1 dark:bg-zinc-50 rounded-full flex items-center justify-center mt-6">
+                        <img
+                           src={exp.data.icon}
+                           alt={exp.data.title}
+                           class="w-full h-full object-contain "
+                         />
+                      </div>
 
+                      <!-- Texto -->
+                      <div>
+                        <h2 class="text-2xl font-semibold dark:text-white">
+                          {exp.data.title}
+                        </h2>
+                      </div>
                     </div>
-                        <p>{exp.body}</p>
-                
-                    </div>
-                )) 
-                }
+                    <!-- Descripción -->
+                    <p class="text-gray-600 dark:text-gray-300">{exp.body}</p>
+                  </div>
+                ))}
               </div>
+              
         </div>
     </div>
     
