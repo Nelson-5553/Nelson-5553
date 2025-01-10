@@ -24,7 +24,7 @@ El Centro de Innovación del Tecnológico Comfenalco es un espacio dedicado a fo
 
 ## Mis contribuciones
 
-Durante mi experiencia como pasante en el Centro de Innovación, participé activamente en proyectos enfocados en el desarrollo de soluciones tecnológicas y la mejora de interfaces de usuario para distintos sistemas internos. Uno de mis principales logros fue el rediseño completo de la interfaz del proyecto Ikarus, optimizando su experiencia de usuario y adaptándola a estándares modernos de diseño.
+Durante mi experiencia como pasante en el Centro de Innovación, participé activamente en proyectos enfocados en el desarrollo de soluciones tecnológicas y la mejora de interfaces de usuario para distintos sistemas internos. Uno de mis principales logros fue el rediseño completo de la interfaz del  [Proyecto Ikarus](/sections/proyectos?page=1), optimizando su experiencia de usuario y adaptándola a estándares modernos de diseño.
 
 Además, trabajé en la creación y desarrollo de módulos personalizados, como herramientas para la gestión de calendarios de eventos y carruseles dinámicos. Estas soluciones no solo mejoraron la organización y presentación de información, sino que también facilitaron el acceso y la interacción de los usuarios con los sistemas existentes.
 
