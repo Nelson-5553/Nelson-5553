@@ -1,5 +1,8 @@
 ---
 import Layout from "../../layouts/Layout.astro"
+import { getCollection } from "astro:content";
+
+const experience = await getCollection('experience');
 ---
 
 <Layout title="Experiencia" class="some-class">
@@ -9,6 +12,23 @@ import Layout from "../../layouts/Layout.astro"
             <h1 class="text-4xl mt-44" transition:name=`experiences`>
                 EXPERIENCIA
               </h1>
+
+              <div>
+                {experience.map((exp)=>(
+                    <div>
+                        <div class="flex justify-start items-center gap-2">
+                            <img src={exp.data.icon} alt="Description" class="w-12 h-12"/>
+                        <h2 class="text-2xl font-semibold prose dark:prose-invert">
+                            {exp.data.title}
+                        </h2>
+
+                    </div>
+                        <p>{exp.body}</p>
+                
+                    </div>
+                )) 
+                }
+              </div>
         </div>
     </div>
     

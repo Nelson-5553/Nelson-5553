@@ -16,4 +16,20 @@ const projects = defineCollection({
     })
 })
 
-export const collections = { projects }
+const experience = defineCollection({
+    
+    schema: z.object({
+
+        title: z.string(),
+        img: z.string(),
+        icon: z.string(),
+        color: z.string(),
+        page: z.object({
+            url: z.string(),
+            url_1: z.string(),
+        }),
+    })
+})
+
+
+export const collections = { projects, experience };
