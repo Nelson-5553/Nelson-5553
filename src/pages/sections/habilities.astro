@@ -2,6 +2,11 @@
 import Layout from "../../layouts/Layout.astro";
 import Atropos from "../../components/Atropos.astro";
 
+import { getEntry, render } from "astro:content";
+const entry = await getEntry("info", "hability");
+const { Content } = await render(entry);
+
+
 const fundamentals = [
   { name: "HTML5", img: "/img/technologies/html5.svg" },
   { name: "CSS", img: "/img/technologies/css.svg" },
@@ -40,44 +45,12 @@ const Tools = [
       <h1 class="text-4xl mt-44" transition:name=`img-habilities`>
         HABILIDADES
       </h1>
-      <p class="text-lg">
-        A lo largo de mi trayectoria, he tenido la oportunidad de trabajar con
-        una variedad de herramientas y tecnologías que me han ayudado a
-        construir proyectos sólidos y funcionales.
-        <br /><br />
-        El Stack donde me destaco es en el desarrollo web, con tecnologías como PHP,
-        Laravel, Tailwing y PostgreSQL.
+      <p class="text-xl">
+        <Content/>
       </p>
-      <div class="flex justify-center items-center">
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
-          <img
-            src="/img/technologies/laravel.svg"
-            alt="Stack"
-            class="w-48 h-48"
-          />
-          <img src="/img/technologies/php.svg" alt="Stack" class="w-48 h-48" />
-
-          <img
-            src="/img/technologies/postgresql.svg"
-            alt="Stack"
-            class="w-48 h-48"
-          />
-
-          <img
-            src="/img/technologies/tailwindcss.svg"
-            alt="Stack"
-            class="w-48 h-48"
-          />
-        </div>
-      </div>
-
-      <br /><br />
-
-      <p class="text-lg">
-        Pero eso no me limita a trabajar con otras tecnologías, como JavaScript,
-        Astro, Nextjs, MongoDB, entre otras.
-      </p>
-      <br />
+     <br>
+     <br>
+     <br>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-24">
         <Atropos>
           <div
