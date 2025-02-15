@@ -88,21 +88,19 @@ document.addEventListener('astro:page-load', () => {
 });
     </script>
   </head>
-  <NavMenu/>
   <!-- <div class="absolute top-0 z-[-2] h-screen w-screen bg-white bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"></div> -->
   <body class="bg-white dark:bg-[#101c44] h-screen w-screen bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))] bg-fixed min-h-screen transition-colors">
     <div class="absolute inset-0 -z-10 h-full w-full"></div>
-    <main class="relative min-h-screen">
+    <main class="relative flex justify-center min-h-screen">
       <div class="absolute top-4 right-8">
-        
-      
-      </div>
-      <div class="flex flex-col justify-center items-center min-h-screen">
-        <!-- contenido -->
-        <slot />
-        
-      </div>
-      
+        <!-- Puedes agregar botones o configuraciones aquí -->
+        <NavMenu />
+        </div>
+        <div class="flex flex-col justify-start items-start p-8 mt-32 min-h-screen max-w-5xl prose dark:prose-invert">
+            <!-- Contenido ajustado arriba a la izquierda -->
+            <slot />
+        </div>
     </main>
-  </body>
+</body>
+
 </html>
