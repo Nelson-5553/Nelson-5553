@@ -1,6 +1,6 @@
 ---
 import { ClientRouter } from 'astro:transitions';
-import NavMenu from '../components/NavMenu.astro';
+import Nav from '../components/nav.astro';
 interface Props {
   title: string;
   class: string;
@@ -94,9 +94,9 @@ document.addEventListener('astro:page-load', () => {
     <main class="relative flex justify-center min-h-screen">
       <div class="absolute top-4 right-8">
         <!-- Puedes agregar botones o configuraciones aquí -->
-        <NavMenu />
-        </div>
-        <div class="flex flex-col justify-start items-start mt-24 min-h-screen max-w-4xl prose dark:prose-invert">
+      </div>
+      <div class="flex flex-col justify-start items-start mt-32 min-h-screen max-w-4xl prose dark:prose-invert">
+          <Nav />
             <!-- Contenido ajustado arriba a la izquierda -->
             <slot />
         </div>
