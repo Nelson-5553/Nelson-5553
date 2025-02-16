@@ -23,6 +23,7 @@ const experience = defineCollection({
         title: z.string(),
         description: z.string(),
         cargo: z.string(),
+        date: z.string(),
         img: z.string(),
         icon: z.string(),
         color: z.string(),

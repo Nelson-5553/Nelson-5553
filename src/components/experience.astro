@@ -30,15 +30,15 @@ const renderedExperiences = await Promise.all(
         <div class="absolute w-5 h-5 bg-blue-500 rounded-full mt-1.5 -start-2.5 border border-white dark:border-gray-900 dark:bg-blue-500"></div>
         <p class="mb-4 text-xl font-bold text-blue-500  ">{exp.data.title}</p>
         <h3 class="text-lg font-semibold   -mt-2">{exp.data.cargo}</h3>
-        <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">February 2022</time>
+        <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">{exp.data.date}</time>
       </li>
       <div class="flex flex-col min-h-5 lg:mt-9 mb-5 truncate">
         <article class="w-full whitespace-normal break-words">
           {exp.data.description}
           <br />
           <br />
-          <a href="#" class="inline-flex items-center px-4 py-2 w-auto text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-100 focus:text-blue-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700">
-            Learn more
+          <a href={exp.data.page.url} target="_blank" class="inline-flex items-center px-4 py-2 w-auto text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-100 focus:text-blue-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700  no-underline">
+            Saber mas
             <svg class="w-3 h-3 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
               <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
             </svg>
