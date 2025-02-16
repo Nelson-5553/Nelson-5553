@@ -5,7 +5,7 @@ export default {
 	theme: {
 	  extend: {
 		fontFamily: {
-			techno: ['Exo 2', 'sans-serif'], // O reemplaza 'Inter' por tu elección
+			sans: ['Inter', 'sans-serif'], // O reemplaza 'Inter' por tu elección
 		},
 	  },
 	},
