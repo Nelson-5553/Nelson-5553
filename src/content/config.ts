@@ -21,6 +21,7 @@ const experience = defineCollection({
     schema: z.object({
 
         title: z.string(),
+        description: z.string(),
         cargo: z.string(),
         img: z.string(),
         icon: z.string(),
