@@ -14,6 +14,4 @@ page:
   url_1: none
 ---
 
-Todo List Laravel es una aplicación diseñada para ayudarte a organizar tus tareas de manera eficiente y práctica. Con una interfaz intuitiva y basada en el poderoso framework Laravel, esta herramienta te permitirá gestionar tus pendientes, categorizar tus actividades y mantener un seguimiento claro de tu productividad diaria. Todo está pensado para ofrecerte una experiencia de usuario agradable, ágil y personalizable, adaptándose a tus necesidades mientras exploras todo el potencial del ecosistema Laravel.
-
-
+Aplicación para organizar tareas con Laravel. Ofrece una interfaz intuitiva para gestionar pendientes, categorizarlos y mejorar la productividad con una experiencia ágil.

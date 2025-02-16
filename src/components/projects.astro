@@ -1,36 +1,59 @@
 ---
-import { Image } from "astro:assets";
-import g3 from "/public/img/Projectos/svg/g3.svg";
-import ikarus from "/public/img/Projectos/svg/ikarus.svg";
+import { getCollection } from "astro:content";
 
-const icon = [
-  { name: "G3", img: g3 },
-  { name: "Ikarus", img: ikarus },
-];
+const experienceEntries = await getCollection("projects");
 
-
+// Renderizar una entrada específica (puedes iterar para más entradas)
+const renderedExperiences = await Promise.all(
+  experienceEntries.map(async (entry) => {
+    const rendered = await entry.render();
+    return {
+      ...entry,
+      Content: rendered.Content,
+      frontmatter: rendered.remarkPluginFrontmatter,
+    };
+  })
+);
 ---
+<div class="flex flex-row justify-center items-center space-x-4">
 
-<!-- Slot C -->
-<div data-swapy-slot="c" class="lg:col-span-2 col-span-3">
-  <!-- Item C -->
-  <div
-    data-swapy-item="c"
-    class="text-center w-full h-52 backdrod-blur-lg bg-white/10 shadow-black dark:shadow-slate-200 shadow-sm rounded-lg p-4 flex-1"
-  >
-    <!-- PROYECTOS  -->
-    <div transition:name=`img-proyecto`>
-      <a href="/sections/proyectos" class="prose dark:prose-invert text-xl font-bold"> PROYECTO </a>
-
-      <div class="flex justify-center items-center gap-12">
-      {icon.map((project) => (
-        <div class = "" >
-          <Image src={project.img} alt={project.name} class="w-32 h-32"/>
-        </div>
-        ))}
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-8">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5" />
+  </svg>
+  
+<h2 class="font-bold mt-6">Proyectos</h2>
+</div> 
+  {renderedExperiences.map((project) => ( 
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <div>
+        <img src={project.data.img} alt="project" class="w-full aspect-[16/9] object-cover rounded-lg"/>
       </div>
-      
-
+      <div class="flex flex-col min-h-auto">
+        <div class="flex justify-start items-center gap-2">
+            <img src={project.data.icon} alt="icon" class="w-8 h-8"/>
+            <p class="text-2xl font-semibold">
+              {project.data.title}
+            </p>
+          </div>
+        <article class="w-full whitespace-normal break-words -mt-10">
+          <project.Content />     
+        </article>
+          <div class="flex flex-row justify-between items-center space-x-3 w-auto h-auto -mt-4">
+           {project.data.technologies.map((tech) => (
+            <img 
+            src={`/img/technologies/${tech}.svg`} 
+            alt="Technology" 
+            class="h-8 w-8" 
+            loading="eager"
+            />
+           ))}
+           <a href={project.data.page.url} class="inline-flex items-center px-4 py-2 -mt-3 w-auto text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-100 focus:text-blue-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700 no-underline">
+            {project.data.title}
+            <svg class="w-3 h-3 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+            </svg>
+          </a>
+           </div>
+      </div>
     </div>
-  </div>
-</div>
+  ))}
