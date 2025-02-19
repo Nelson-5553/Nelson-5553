@@ -1,0 +1,14 @@
+---
+const {link, text, icon} = Astro.props
+
+---
+<a href={link} target="_blank" class="no-underline">
+    <div class="bg-gradient-to-tr from-blue-600 to-whote dark:gray-950  rounded-full p-0.5 hover:-translate-y-1 hover:scale-110 hover:bg-slate-400-500 duration-150">
+        <div  class="flex justify-center items-center gap-2 rounded-full w-auto px-4 py-1 transition ease-in-out delay-150 bg-white dark:bg-slate-700 ">
+          
+            {icon && <span set:html={icon}></span>}
+            {text}
+        
+    </div>
+</div>
+</a>

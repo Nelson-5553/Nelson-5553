@@ -1,5 +1,15 @@
 ---
 import Badge from "./Badge.astro"
+import ButtomLink from "./ButtomLink.astro"
+
+const HvImage = `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+</svg>
+`
+const LinkedinImage = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M20.47 2H3.53a1.45 1.45 0 0 0-1.47 1.43v17.14A1.45 1.45 0 0 0 3.53 22h16.94a1.45 1.45 0 0 0 1.47-1.43V3.43A1.45 1.45 0 0 0 20.47 2M8.09 18.74h-3v-9h3ZM6.59 8.48a1.56 1.56 0 1 1 0-3.12a1.57 1.57 0 1 1 0 3.12m12.32 10.26h-3v-4.83c0-1.21-.43-2-1.52-2A1.65 1.65 0 0 0 12.85 13a2 2 0 0 0-.1.73v5h-3v-9h3V11a3 3 0 0 1 2.71-1.5c2 0 3.45 1.29 3.45 4.06Z"/></svg>
+`
+const GithubImage = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 16 16"><path fill="currentColor" d="M8 1C4.13 1 1 4.21 1 8.18c0 3.14 1.96 5.81 4.69 6.79c.37.09.31-.17.31-.36v-1.25c-2.12.26-2.21-1.19-2.35-1.43c-.29-.5-.97-.63-.76-.87c.48-.26.98.06 1.55.93c.41.63 1.22.52 1.63.42c.09-.38.28-.71.54-.98c-2.2-.4-3.12-1.78-3.12-3.42c0-.8.25-1.53.76-2.12c-.32-.97.03-1.8.08-1.93c.91-.08 1.85.67 1.93.73c.52-.14 1.11-.22 1.77-.22s1.25.08 1.78.22c.18-.14 1.05-.78 1.9-.71c.05.12.39.94.09 1.9c.51.59.76 1.33.76 2.13c0 1.64-.92 3.02-3.13 3.42a2 2 0 0 1 .44.67c.1.25.15.52.15.79v1.81c.01.14 0 .29.23.29c2.77-.96 4.76-3.65 4.76-6.81c0-3.97-3.13-7.19-7-7.19Z"/></svg>
+`
 ---
 <div data-aos="fade-up"></div>
 <div id="Inicio" class="flex justify-center items-center space-x-4">
@@ -14,8 +24,8 @@ import Badge from "./Badge.astro"
 </p>
 
 <div class="flex flex-row space-x-4">
-<a href="https://www.linkedin.com/in/nelson-jimenez-10429a337/" target="_blank" class="flex justify-center items-center rounded-full w-auto px-4 py-1 transition ease-in-out delay-150 bg-white border border-slate-400 text-black hover:-translate-y-1 hover:scale-110 hover:bg-slate-400-500 duration-300 no-underline">Linkedin</a>
-<a href="https://github.com/Nelson-5553 " target="_blank" class="flex justify-center items-center rounded-full w-auto px-4 py-1 transition ease-in-out delay-150 bg-white border border-slate-400 text-black hover:-translate-y-1 hover:scale-110 hover:bg-slate-400-500 duration-300 no-underline">GitHub</a>
-<a href="/PDF/HV.pdf" target="_blank" class="flex justify-center items-center rounded-full w-auto px-4 py-1 transition ease-in-out delay-150 bg-white border border-slate-400 text-black hover:-translate-y-1 hover:scale-110 hover:bg-slate-400-500 duration-300 no-underline" > Curriculum </a>
+  <ButtomLink link="https://www.linkedin.com/in/nelson-jimenez-10429a337/" text="Linkedin" icon={LinkedinImage}/>
+  <ButtomLink link="https://github.com/Nelson-5553" text="GitHub" icon={GithubImage}/>
+  <ButtomLink link="/PDF/HV.pdf" text="Curriculum" icon={HvImage}/>
 </div>
 </div>
