@@ -14,4 +14,4 @@ page:
   url_1: none
 ---
 
-Plataforma web diseñada para centralizar y gestionar información de proyectos. Facilita el almacenamiento, actualización y consulta de datos, optimizando su seguimiento.
+Plataforma web diseñada para centralizar y gestionar información de proyectos. Facilita el almacenamiento, actualización y consulta de datos, optimizando su seguimiento,(Este proyecto forma parte de mi experiencia en centro innova).
