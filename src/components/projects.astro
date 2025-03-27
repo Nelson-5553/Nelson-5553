@@ -12,51 +12,93 @@ const renderedExperiences = await Promise.all(
       Content: rendered.Content,
       frontmatter: rendered.remarkPluginFrontmatter,
     };
-  })
+  }),
 );
 ---
-<div data-aos="fade-up">
-<div id="proyecto" class="flex flex-row justify-center items-center space-x-4">
 
-  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-8">
-    <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5" />
-  </svg>
-  
-<h2 class="font-bold mt-6">Proyectos</h2>
-</div> 
-  {renderedExperiences.map((project) => ( 
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-      <div>
-        <img src={project.data.img} alt="project" class="w-full aspect-[16/9] object-cover rounded-lg"/>
-      </div>
-      <div class="flex flex-col min-h-auto">
-        <div class="flex justify-start items-center gap-2">
-            <img src={project.data.icon} alt="icon" class="w-8 h-8"/>
-            <p class="text-2xl font-semibold">
-              {project.data.title}
-            </p>
-          </div>
-        <article class="w-full whitespace-normal break-words -mt-10">
-          <project.Content />     
-        </article>
-          <div class="flex flex-row justify-between items-center space-x-3 w-auto h-auto -mt-4">
-           {project.data.technologies.map((tech) => (
-            <img 
-            src={`/img/technologies/${tech}.svg`} 
-            alt="Technology" 
-            class="h-8 w-8" 
-            loading="eager"
-            />
-           ))}
-           <a href={project.data.page.url} class="inline-flex items-center px-4 py-2 -mt-3 w-auto text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-100 focus:text-blue-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700 no-underline">
-            {project.data.title}
-            <svg class="w-3 h-3 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
-            </svg>
-          </a>
-           </div>
-      </div>
-    </div>
-    
-  ))}
+<div data-aos="fade-up">
+  <div
+    id="proyecto"
+    class="flex flex-row justify-center items-center space-x-4"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke-width="1.5"
+      stroke="currentColor"
+      class="size-8"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5"
+      ></path>
+    </svg>
+    <h2 class="font-bold mt-6">Proyectos</h2>
   </div>
+
+  {
+    renderedExperiences.map((project) => {
+      const HideButton = project.data.page.url === "/"; // Se evalúa por cada proyecto
+      return (
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div>
+            <img
+              src={project.data.img}
+              alt="project"
+              class="w-full aspect-[16/9] object-cover rounded-lg"
+            />
+          </div>
+          <div class="flex flex-col min-h-auto">
+            <div class="flex justify-start items-center gap-2">
+              <img src={project.data.icon} alt="icon" class="w-8 h-8" />
+              <p class="text-2xl font-semibold">{project.data.title}</p>
+            </div>
+            <article class="w-full whitespace-normal break-words -mt-10">
+              <project.Content />
+            </article>
+            <div class="flex flex-row justify-between items-center space-x-3 w-auto h-auto -mt-4">
+              {project.data.technologies.map((tech) => (
+                <img
+                  src={`/img/technologies/${tech}.svg`}
+                  alt="Technology"
+                  class="h-8 w-8"
+                  loading="eager"
+                />
+              ))}
+
+              {HideButton ? (
+                <span class="text-gray-500 text-sm font-medium">
+                  Url no disponible
+                </span>
+              ) : (
+                <a
+                  href={project.data.page.url}
+                  class="inline-flex items-center px-4 py-2 -mt-3 w-auto text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-100 focus:text-blue-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700 no-underline"
+                >
+                  {project.data.title}
+                  <svg
+                    class="w-3 h-3 ms-2 rtl:rotate-180"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 14 10"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M1 5h12m0 0L9 1m4 4L9 9"
+                    />
+                  </svg>
+                </a>
+              )}
+            </div>
+          </div>
+        </div>
+      );
+    })
+  }
+</div>

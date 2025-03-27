@@ -10,7 +10,7 @@ technologies:
   - tailwindcss
   
 page:
-  url: https://my-app-sigma-rosy.vercel.app
+  url: https://g3s-games.vercel.app
   url_1: https://g3s-games.vercel.app
 ---
 

@@ -10,8 +10,8 @@ technologies:
   - postgresql
   
 page:
-  url: https://tareas-production-61d6.up.railway.app
-  url_1: none
+  url: https://github.com/Nelson-5553/tareas
+  url_1: / 
 ---
 
 Aplicación para organizar tareas con Laravel. Ofrece una interfaz intuitiva para gestionar pendientes, categorizarlos y mejorar la productividad con una experiencia ágil.
