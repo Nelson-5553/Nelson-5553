@@ -10,7 +10,7 @@ technologies:
   - postgresql
   
 page:
-  url: https://github.com/Nelson-5553/tareas
+  url: https://tareas-production-61d6.up.railway.app/tareas
   url_1: / 
 ---
 

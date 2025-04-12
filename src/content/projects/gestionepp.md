@@ -10,8 +10,8 @@ technologies:
   - tailwindcss
   
 page:
-  url: /
+  url: https://gestionepp-production.up.railway.app
   url_1: /
 ---
 
-La solución eficiente para el control de Equipos de Protección Personal en las empresas. Optimiza la administración, asegura el cumplimiento y lleva un registro preciso en un solo lugar. (Proyecto personal - Trabajo en progreso)
+La solución eficiente para el control de Equipos de Protección Personal en las empresas. Optimiza la administración, asegura el cumplimiento y lleva un registro preciso en un solo lugar.
