@@ -42,20 +42,31 @@ const renderedExperiences = await Promise.all(
     renderedExperiences.map((project) => {
       const HideButton = project.data.page.url === "/"; // Se evalúa por cada proyecto
       return (
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          <div>
+        <div class="grid grid-cols-1 lg:grid-cols-2 md:gap-8">
+          <div class="lg:hidden flex items-center gap-3">
+            <img
+              src={project.data.icon}
+              alt={`${project.data.title} icon`}
+              class="w-8 h-8 object-contain"
+            />
+            <p class="text-xl font-semibold truncate">{project.data.title}</p>
+          </div>
+
+         
+          <div class="aspect-[16/9] -mt-12 lg:mt-0">
             <img
               src={project.data.img}
               alt="project"
-              class="w-full aspect-[16/9] object-cover rounded-lg"
+              class="w-full object-cover rounded-lg"
             />
           </div>
+        
           <div class="flex flex-col min-h-auto">
-            <div class="flex justify-start items-center gap-2">
+            <div class="hidden lg:flex flex-row justify-start items-center gap-2">
               <img src={project.data.icon} alt="icon" class="w-8 h-8" />
               <p class="text-2xl font-semibold">{project.data.title}</p>
             </div>
-            <article class="w-full whitespace-normal break-words -mt-10">
+            <article class="w-full whitespace-normal break-words text-justify md:text-left">
               <project.Content />
             </article>
             <div class="flex flex-row justify-between items-center space-x-3 w-auto h-auto -mt-4">
