@@ -69,7 +69,8 @@ const renderedExperiences = await Promise.all(
             <article class="w-full whitespace-normal break-words text-justify md:text-left">
               <project.Content />
             </article>
-            <div class="flex flex-row justify-between items-center space-x-3 w-auto h-auto -mt-4">
+            <div class="flex flex-col md:flex-row items-center space-x-2 w-auto h-auto -mt-4">
+            <div class="flex flex-row justify-around w-full">
               {project.data.technologies.map((tech) => (
                 <img
                   src={`/img/technologies/${tech}.svg`}
@@ -78,7 +79,8 @@ const renderedExperiences = await Promise.all(
                   loading="eager"
                 />
               ))}
-
+            </div>
+          <div class="w-full md:w-auto">
               {HideButton ? (
                 <span class="text-gray-500 text-sm font-medium">
                   Url no disponible
@@ -86,7 +88,7 @@ const renderedExperiences = await Promise.all(
               ) : (
                 <a
                   href={project.data.page.url}
-                  class="inline-flex items-center px-4 py-2 -mt-3 w-auto text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-100 focus:text-blue-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700 no-underline"
+                  class="inline-flex items-center px-4 py-2 -mt-3 w-full text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-100 focus:text-blue-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700 no-underline"
                 >
                   {project.data.title}
                   <svg
@@ -106,6 +108,7 @@ const renderedExperiences = await Promise.all(
                   </svg>
                 </a>
               )}
+              </div>
             </div>
           </div>
         </div>
