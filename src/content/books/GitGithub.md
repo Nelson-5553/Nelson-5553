@@ -1,5 +1,5 @@
 ---
-title: "Aprendiendo Git y GitHub",
+title: "Aprendiendo Git y GitHub"
 description: "En el libro se explican los orígenes de Git y por qué ahora lo usa todo el mundo. ¿De dónde nació? ¿Quién lo creó? Además, te explico todos sus fundamentos para que entiendas qué es lo que esconden todos los comando que utilizas en tu día a día."
 state: "Leido"
 author: "Miguel Angel Duran"
