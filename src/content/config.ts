@@ -33,6 +33,17 @@ const experience = defineCollection({
         }),
     })
 })
+const books = defineCollection({
+    
+    schema: z.object({
+        title: z.string(),
+        description: z.string(),
+        state: z.string(),
+        author: z.string(),
+        image: z.string(),
+        link: z.string(),
+    })
+})
 
 
-export const collections = { projects, experience };
+export const collections = { projects, experience, books };
