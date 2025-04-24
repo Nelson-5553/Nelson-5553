@@ -1,19 +1,9 @@
 ---
 
-const libros = [
-  {
-    title: "Aprendiendo Git y GitHub", img: "https://m.media-amazon.com/images/I/61p6VxskKVL._SL1430_.jpg", link: "https://www.amazon.com/dp/B0D2LPMG6F?ref=ppx_yo2ov_dt_b_fed_asin_title", author: "Miguel Angel Duran"
-  },
-  {
-    title: "Aprendiendo React", img: "https://m.media-amazon.com/images/I/61d2i7cnPpL._SL1499_.jpg", link: "https://www.amazon.com/dp/B0CHL7M2LL?ref=ppx_yo2ov_dt_b_fed_asin_title", author: "Carlos Azaustre"
-  },
-  {
-    title: "Aprendiendo JavaScript", img: "https://m.media-amazon.com/images/I/6137upbz66L._SL1250_.jpg", link: "https://www.amazon.com/dp/B08TZ3HSYZ?ref=ppx_yo2ov_dt_b_fed_asin_title", author: "Carlos Azaustre"
-  },
-]
+
 ---
-  <div class="w-full lg:h-screen overflow-x-hidden sm:px-2">
-    <div class="w-full h-full max-w-3xl mx-auto py-12 px-2">
+  <div class="w-full lg:h-screen overflow-x-hidden sm:px-2 scrollbar-hide">
+    <div class="w-full h-full max-w-3xl mx-auto px-2">
       <ol class="relative border-s border-black dark:border-gray-700 list-none">
         <li class="mb-10 ms-4">
           <div
@@ -83,27 +73,16 @@ const libros = [
           </p>
         </li>
       </ol>
-      <br><br>
-      <h1 class="text-2xl font-bold prose dark:prose-invert">Libros</h1>
-      <br><br>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-      {
-        libros.map((libro) => (
-        <div class="relative flex justify-center items-center hover:scale-105 transition-transform duration-300 ease-in-out">
-          <a href={libro.link} target="_blank" rel="noopener noreferrer">
-          <img 
-            src={libro.img} 
-            alt={libro.title} 
-            class="w-80 h-96 object-cover" 
-          />
-          </a>
-          </div>
-        ))
-      }
-      </div>
-      <br/>
-  <br/>
-  <br/>
     </div>
   </div>
 
+  <style>
+    /* Ocultar scrollbar pero mantener funcionalidad */
+    .scrollbar-hide::-webkit-scrollbar {
+      display: none;
+    }
+    .scrollbar-hide {
+      -ms-overflow-style: none;  /* IE y Edge */
+      scrollbar-width: none;  /* Firefox */
+    }
+  </style>

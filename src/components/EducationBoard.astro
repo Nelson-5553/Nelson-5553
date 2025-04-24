@@ -1,10 +1,11 @@
 ---
+import Books from "./Books.astro"
 import Studios from "./studios.astro"
 
 
 ---
 
-<div class="w-full rounded-lg shadow-sm ">
+<div class="w-full rounded-lg">
     <div class="sm:hidden">
         <label for="tabs" class="sr-only">Select tab</label>
         <select id="tabs" class="border-0 border-b text-gray-900 text-sm rounded-t-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 list-none">
@@ -13,27 +14,32 @@ import Studios from "./studios.astro"
             <option>Libros</option>
         </select>
     </div>
-    <ul class="hidden text-sm font-medium text-center text-black border-x border-t rounded-lg sm:flex dark:divide-gray-600 dark:text-gray-400 rtl:divide-x-reverse list-none" id="fullWidthTab" data-tabs-toggle="#fullWidthTabContent" role="tablist">
-        <li class="w-full">
-            <button id="stats-tab" data-tabs-target="#stats" type="button" role="tab" aria-controls="stats" aria-selected="true" class="inline-block w-full p-4 rounded-ss-lg  hover:bg-gray-100 focus:outline-none dark:hover:bg-gray-600">Linea de tiempo</button>
+    <ul class="hidden text-sm font-medium text-center text-black  rounded-lg sm:flex dark:divide-gray-600 dark:text-gray-400 rtl:divide-x-reverse list-none -mb-2 -ml-6" id="fullWidthTab" data-tabs-toggle="#fullWidthTabContent" role="tablist">
+        <li class="w-auto border-x border-t border-b border-gray-200 rounded-tr-lg dark:border-red-600">
+            <button id="stats-tab" data-tabs-target="#stats" type="button" role="tab" aria-controls="stats" aria-selected="true" class=" w-full p-4 rounded-tr-lg  hover:bg-gray-100 focus:outline-none dark:hover:bg-gray-600">Linea de tiempo</button>
         </li>
-        <li class="w-full">
-            <button id="about-tab" data-tabs-target="#about" type="button" role="tab" aria-controls="about" aria-selected="false" class="inline-block w-full p-4 hover:bg-gray-100 focus:outline-none dark:hover:bg-gray-600">Certificaciones</button>
+        <li class="w-auto border-x border-t border-b border-gray-200 rounded-tr-lg dark:border-red-600">
+            <button id="about-tab" data-tabs-target="#about" type="button" role="tab" aria-controls="about" aria-selected="false" class=" w-full rounded-tr-lg p-4 hover:bg-gray-100 focus:outline-none dark:hover:bg-gray-600">Certificaciones</button>
         </li>
-        <li class="w-full">
-            <button id="faq-tab" data-tabs-target="#faq" type="button" role="tab" aria-controls="faq" aria-selected="false" class="inline-block w-full p-4 rounded-se-lg hover:bg-gray-100 focus:outline-none dark:hover:bg-gray-600">Libros</button>
+        <li class="w-auto border-x border-t border-b border-gray-200 rounded-tr-lg dark:border-red-600">
+            <button id="faq-tab" data-tabs-target="#faq" type="button" role="tab" aria-controls="faq" aria-selected="false" class=" w-full p-4 rounded-tr-lg hover:bg-gray-100 focus:outline-none dark:hover:bg-gray-600">Libros</button>
         </li>
     </ul>
     <div id="fullWidthTabContent" class="">
-        <div class="hidden rounded-lg" id="stats" role="tabpanel" aria-labelledby="stats-tab">
+        <div class="hidden rounded-b-lg border" id="stats" role="tabpanel" aria-labelledby="stats-tab">
            <Studios/>
         </div>
-        <div class="hidden p-4 rounded-lg md:p-8 " id="about" role="tabpanel" aria-labelledby="about-tab">
+        <div class="hidden p-4 rounded-b-lg border md:p-8 " id="about" role="tabpanel" aria-labelledby="about-tab">
            CERTIFICACIONES
         </div>
-        <div class="hidden p-4 rounded-lg " id="faq" role="tabpanel" aria-labelledby="faq-tab">
-          lIBROS
+        <div class="hidden p-4 rounded-b-lg border" id="faq" role="tabpanel" aria-labelledby="faq-tab">
+          <Books>
             </div>
         </div>
     </div>
 </div>
+<style>
+.tab-active {
+  @apply bg-blue-100 text-blue-700 font-semibold dark:bg-gray-700 dark:text-white;
+}
+  </style>
