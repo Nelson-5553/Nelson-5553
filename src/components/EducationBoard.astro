@@ -6,30 +6,32 @@ import Studios from "./studios.astro"
 ---
 
 <div class="w-full rounded-lg">
-    <ul class="flex justify-start text-sm font-medium text-center text-black dark:text-white  rounded-lg sm:flex rtl:divide-x-reverse list-none -mb-2 -ml-6" id="fullWidthTab" data-tabs-toggle="#fullWidthTabContent" role="tablist">
-        <li class="w-auto border rounded-tr-lg">
-            <button id="stats-tab" data-tabs-target="#stats" type="button" role="tab" aria-controls="stats" aria-selected="false" class=" w-full p-4 rounded-tr-lg  hover:bg-gray-100 focus:outline-none dark:hover:bg-gray-600">Estudios</button>
-        </li>
-        <li class="w-auto border rounded-tr-lg">
-            <button id="about-tab" data-tabs-target="#about" type="button" role="tab" aria-controls="about" aria-selected="false" class=" w-full rounded-tr-lg p-4 hover:bg-gray-100 focus:outline-none dark:hover:bg-gray-600">Certificados</button>
-        </li>
-        <li class="w-auto border rounded-tr-lg">
-            <button id="faq-tab" data-tabs-target="#faq" type="button" role="tab" aria-controls="faq" aria-selected="false" class=" w-full p-4 rounded-tr-lg hover:bg-gray-100 focus:outline-none dark:hover:bg-gray-600">Libros</button>
-        </li>
-    </ul>
-    <div id="fullWidthTabContent" class="">
-        <div class="hidden rounded-b-lg border backdrop-blur-md" id="stats" role="tabpanel" aria-labelledby="stats-tab">
+    <div class="flex justify-start text-sm font-medium text-center text-blue-500 dark:text-blue-500 rounded-lg sm:flex rtl:divide-x-reverse list-none" id="fullWidthTab" data-tabs-toggle="#fullWidthTabContent" role="tablist">
+        <div class="w-auto border-x border-t rounded-t-lg">
+            <button id="stats-tab" data-tabs-target="#stats" type="button" role="tab" aria-controls="stats" aria-selected="false" class="w-full p-4  dark:text-white hover:bg-gray-100 focus:outline-none dark:hover:bg-gray-600">Estudios</button>
+        </div>
+        <div class="w-auto border-x border-t rounded-t-lg">
+            <button id="about-tab" data-tabs-target="#about" type="button" role="tab" aria-controls="about" aria-selected="false" class="w-full p-4  dark:text-white hover:bg-gray-100 focus:outline-none dark:hover:bg-gray-600">Certificados</button>
+        </div>
+        <div class="w-auto border-x border-t rounded-t-lg">
+            <button id="faq-tab" data-tabs-target="#faq" type="button" role="tab" aria-controls="faq" aria-selected="false" class="w-full p-4 dark:text-white hover:bg-gray-100 focus:outline-none dark:hover:bg-gray-600">Libros</button>
+        </div>
+        <div class="border-t flex-grow h-[1px] self-end mb-[1px]"></div>
+    </div>
+
+    <div id="fullWidthTabContent">
+        <div class="hidden rounded-b-lg border border-t-0 backdrop-blur-md" id="stats" role="tabpanel" aria-labelledby="stats-tab">
            <Studios/>
         </div>
-        <div class="hidden p-4 rounded-b-lg border md:p-8 " id="about" role="tabpanel" aria-labelledby="about-tab">
+        <div class="hidden p-4 rounded-b-lg border border-t-0 md:p-8" id="about" role="tabpanel" aria-labelledby="about-tab">
            CERTIFICACIONES
         </div>
-        <div class="hidden p-4 rounded-b-lg border" id="faq" role="tabpanel" aria-labelledby="faq-tab">
-          <Books>
-            </div>
+        <div class="hidden p-4 rounded-b-lg border border-t-0" id="faq" role="tabpanel" aria-labelledby="faq-tab">
+           <Books/>
         </div>
     </div>
 </div>
+
 <style>
 .tab-active {
   @apply bg-blue-100 text-blue-700 font-semibold dark:bg-gray-700 dark:text-white;
