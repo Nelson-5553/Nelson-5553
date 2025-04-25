@@ -9,5 +9,5 @@ habylity:
   - migraciones
   - eloquent
 image: "https://static.platzi.com/media/achievements/laravel.png"
-link: "https://platzi.com/cursos/laravel/"
+link: "/PDF/laravel.pdf"
 ---

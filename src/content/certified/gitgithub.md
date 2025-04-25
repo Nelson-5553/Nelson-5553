@@ -9,5 +9,5 @@ habylity:
   - ramas
   - pull requests
 image: "https://static.platzi.com/media/achievements/git-github.png"
-link: "https://platzi.com/cursos/git-github/"
+link: "/PDF/git.pdf"
 ---

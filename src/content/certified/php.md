@@ -9,5 +9,5 @@ habylity:
   - formularios
   - bases de datos
 image: "https://static.platzi.com/media/achievements/php.png"
-link: "https://platzi.com/cursos/php/"
+link: "/PDF/php.pdf"
 ---

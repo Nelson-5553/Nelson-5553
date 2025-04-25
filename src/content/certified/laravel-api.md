@@ -9,5 +9,5 @@ habylity:
   - controladores
   - autenticación
 image: "https://static.platzi.com/media/achievements/laravel-api.png"
-link: "https://platzi.com/p/nelsonataly2004/curso/2185-course/diploma/detalle/"
+link: "/PDF/laravel-api.pdf"
 ---
