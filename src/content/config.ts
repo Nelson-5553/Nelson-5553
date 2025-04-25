@@ -52,7 +52,7 @@ const certified = defineCollection({
         shipper: z.string(),
         title: z.string(),
         description: z.string(),
-        Habylity: z.array(z.string()),
+        habylity: z.array(z.string()),
         author: z.string(),
         image: z.string(),
         link: z.string(),
@@ -60,4 +60,4 @@ const certified = defineCollection({
 })
 
 
-export const collections = { projects, experience, books };
+export const collections = { projects, experience, books, certified };
