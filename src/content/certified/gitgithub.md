@@ -8,6 +8,6 @@ habylity:
   - control de versiones
   - ramas
   - pull requests
-image: "https://static.platzi.com/media/achievements/git-github.png"
-link: "/PDF/git.pdf"
+image: "/img/certified/git.png"
+link: "/PDF/certified/git.pdf"
 ---

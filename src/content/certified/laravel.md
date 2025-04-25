@@ -8,6 +8,6 @@ habylity:
   - controladores
   - migraciones
   - eloquent
-image: "https://static.platzi.com/media/achievements/laravel.png"
-link: "/PDF/laravel.pdf"
+image: "/img/certified/laravel.png"
+link: "/PDF/certified/laravel.pdf"
 ---

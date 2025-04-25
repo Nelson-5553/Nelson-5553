@@ -7,6 +7,6 @@ habylity:
   - docker compose
   - redes
   - volumenes
-image: "https://static.platzi.com/media/achievements/docker-fundamentos.png"
-link: "/PDF/docker.pdf"
+image: "/img/certified/docker.png"
+link: "/PDF/certified/docker.pdf"
 ---

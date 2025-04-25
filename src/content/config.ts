@@ -53,7 +53,6 @@ const certified = defineCollection({
         title: z.string(),
         description: z.string(),
         habylity: z.array(z.string()),
-        author: z.string(),
         image: z.string(),
         link: z.string(),
     })

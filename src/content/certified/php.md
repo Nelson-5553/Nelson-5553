@@ -8,6 +8,6 @@ habylity:
   - funciones
   - formularios
   - bases de datos
-image: "https://static.platzi.com/media/achievements/php.png"
-link: "/PDF/php.pdf"
+image: "/img/certified/php.png"
+link: "/PDF/certified/php.pdf"
 ---

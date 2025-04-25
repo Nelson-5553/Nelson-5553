@@ -8,6 +8,6 @@ habylity:
   - rutas
   - controladores
   - autenticación
-image: "https://static.platzi.com/media/achievements/laravel-api.png"
-link: "/PDF/laravel-api.pdf"
+image: "/img/certified/laravel-api.png"
+link: "/PDF/certified/laravel-api.pdf"
 ---
