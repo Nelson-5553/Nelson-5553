@@ -1,6 +1,6 @@
 ---
 title: "Aprendiendo JavaScript"
-description: "Aprendiendo JavaScript es una guía práctica que te lleva desde los fundamentos hasta conceptos clave del lenguaje más popular del desarrollo web. Con un enfoque claro y ejemplos reales, Carlos Azaustre te explica cómo y por qué funciona JavaScript, ayudándote a dominar desde las bases hasta técnicas modernas. Ideal para quienes quieren entender de verdad el 'por qué' detrás del código."
+description: "Aprendiendo JavaScript es una guía práctica que te lleva desde los fundamentos hasta conceptos clave del lenguaje más popular del desarrollo web."
 state: "Leido"
 author: "Carlos Azaustre"
 image: "/img/books/javascript.png"

@@ -1,6 +1,6 @@
 ---
 title: "Aprendiendo React"
-description: " introducción a React, este libro te guiará a través de la configuración del entorno de desarrollo, la creación de proyectos, la comprensión de los componentes, el manejo de eventos y el ciclo de vida de los componentes. En secciones posteriores, abordarás temas más complejos como la gestión del estado global, el enrutamiento, los estilos, el consumo de APIs y la optimización del rendimiento."
+description: " introducción a React, este libro te guiará a través de la configuración del entorno de desarrollo, la creación de proyectos, la comprensión de los componentes, el manejo de eventos y el ciclo de vida de los componentes."
 state: "Leyendo"
 author: "Carlos Azaustre"
 image: "/img/books/react.png"
