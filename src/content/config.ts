@@ -1,4 +1,5 @@
 import { defineCollection, z } from "astro:content";
+import Habylity from "../components/habylity.astro";
 
 const projects = defineCollection({
 
@@ -39,6 +40,19 @@ const books = defineCollection({
         title: z.string(),
         description: z.string(),
         state: z.string(),
+        author: z.string(),
+        image: z.string(),
+        link: z.string(),
+    })
+})
+
+const certified = defineCollection({
+    
+    schema: z.object({
+        shipper: z.string(),
+        title: z.string(),
+        description: z.string(),
+        Habylity: z.array(z.string()),
         author: z.string(),
         image: z.string(),
         link: z.string(),
