@@ -8,6 +8,6 @@ habylity:
   - rutas
   - controladores
   - autenticación
-image: "/img/certified/laravel-api.png"
+image: "/img/certified/laravel.png"
 link: "/PDF/certified/laravel-api.pdf"
 ---
