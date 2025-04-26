@@ -5,17 +5,17 @@ import { getCollection } from "astro:content";
 const certified = await getCollection("certified");
 ---
 
-<div class="max-w-3xl mx-auto py-8">
-  <div class="flex flex-col">
-    <h1 class="text-2xl font-bold text-blue-500 dark:text-blue-400">
+<div class="max-w-5xl mx-auto py-8">
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
+    <h1 class="text-2xl font-bold text-blue-500 dark:text-blue-400 col-span-full">
       Certificados
     </h1>
 
     {
       certified.map((certificado) => (
-        <div class="flex flex-col md:flex-row bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden mb-8">
+        <div class="flex flex-col bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden">
           
-          <div class="md:w-96 w-full md:aspect-auto md:h-72">
+          <div class="w-full md:aspect-auto md:h-72">
             <img
               src={certificado.data.image}
               alt={certificado.data.title}
@@ -23,7 +23,7 @@ const certified = await getCollection("certified");
             />
           </div>
 
-          <div class="w-full p-6 flex flex-col justify-between md:h-72">
+          <div class="w-full p-6 flex flex-col justify-between">
             <div>
               <div class="flex flex-col justify-between">
                 <span class="text-xs font-medium mb-4">
