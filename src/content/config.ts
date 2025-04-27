@@ -54,6 +54,7 @@ const certified = defineCollection({
         description: z.string(),
         habylity: z.array(z.string()),
         image: z.string(),
+        color: z.string(),
         link: z.string(),
     })
 })
