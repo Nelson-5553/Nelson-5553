@@ -12,9 +12,8 @@ technologies:
   
 page:
   url: https://g3s-games.vercel.app
-  url_1: https://g3s-games.vercel.app
+  url_1: https://github.com/Nelson-5553/G3s_GAMES
 ---
 
 Proporciona información detallada sobre videojuegos con datos de la API de RAWG. Permite explorar reseñas, calificaciones, géneros y plataformas en un solo lugar.
 
-<!-- puedes consultar informacion sobre diferentes videojuegos ademas de iniciar sesion comentar,puntuar y hasta dar likes dentro de cada juego -->

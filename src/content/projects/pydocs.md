@@ -11,9 +11,8 @@ technologies:
   
 page:
   url: https://pydocs-xi.vercel.app/es/
-  url_1: https://pydocs-xi.vercel.app/es/
+  url_1: https://github.com/Nelson-5553/pydocs
 ---
 
-PyDocs es una plataforma de documentación moderna y práctica para el lenguaje de programación Python. Este proyecto simula una guía completa y visualmente atractiva, pensada para facilitar el aprendizaje y la consulta de recursos clave de Python.
-
+PyDocs es una plataforma de documentación moderna y práctica para el lenguaje de programación Python.
 `(Trabajo en progreso)`

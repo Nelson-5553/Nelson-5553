@@ -12,7 +12,7 @@ technologies:
   
 page:
   url: https://gestionepp-production.up.railway.app
-  url_1: /
+  url_1: https://github.com/Nelson-5553/GestionEPP
 ---
 
 La solución eficiente para el control de Equipos de Protección Personal en las empresas. Optimiza la administración, asegura el cumplimiento y lleva un registro preciso en un solo lugar.
