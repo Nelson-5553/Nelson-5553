@@ -3,6 +3,7 @@ title: PyDocs
 img: "/img/Projectos/pydocs.png"
 icon: "/img/Projectos/svg/python.png"
 color: "bg-sky-100 text-sky-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-sky-900 dark:text-sky-300"
+isNew: True
 technologies:
   - astro
   - css

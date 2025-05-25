@@ -38,20 +38,24 @@ const renderedExperiences = await Promise.all(
     <h2 class="font-bold mt-6">Proyectos</h2>
   </div>
 
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-12">
     {
       renderedExperiences.map((project) => {
         const HideButton = project.data.page.url === "/"; // Se evalúa por cada proyecto
         return (
           <div class="flex flex-col items-center">
-            <div class="aspect-[16/9] w-full">
+            <div class="relative aspect-[16/9] w-full">
               <img
                 src={project.data.img}
                 alt="project"
                 class="w-full object-cover rounded-t-lg m-0"
               />
+              {project.data.isNew && (
+                <span class="absolute top-2 right-2 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded">
+                  Nuevo
+                </span>
+              )}
             </div>
-
             <div class="flex flex-col items-center bg-slate-50 dark:bg-neutral-800 rounded-b-lg shadow-md p-4 w-full h-full">
   <div class="flex flex-row justify-start items-center gap-2 w-full mb-2">
     <img src={project.data.icon} alt="icon" class="w-8 h-8 my-0" />

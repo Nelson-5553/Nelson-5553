@@ -9,10 +9,12 @@ const projects = defineCollection({
         img: z.string(),
         icon: z.string(),
         color: z.string(),
+        isNew: z.boolean(),
         technologies: z.array(z.string()),
         page: z.object({
             url: z.string(),
             url_1: z.string(),
+        order: z.number(),
         }),
     })
 })
