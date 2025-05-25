@@ -14,7 +14,6 @@ const projects = defineCollection({
         page: z.object({
             url: z.string(),
             url_1: z.string(),
-        order: z.number(),
         }),
     })
 })

@@ -38,7 +38,7 @@ const renderedExperiences = await Promise.all(
     <h2 class="font-bold mt-6">Proyectos</h2>
   </div>
 
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-12">
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
     {
       renderedExperiences.map((project) => {
         const HideButton = project.data.page.url === "/"; // Se evalúa por cada proyecto
