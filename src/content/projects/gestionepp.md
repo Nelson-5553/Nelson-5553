@@ -11,7 +11,7 @@ technologies:
   - tailwindcss
   
 page:
-  url: https://gestionepp-production.up.railway.app
+  url: /
   url_1: https://github.com/Nelson-5553/GestionEPP
 ---
 
