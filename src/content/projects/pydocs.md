@@ -15,4 +15,3 @@ page:
 ---
 
 PyDocs es una plataforma de documentación moderna y práctica para el lenguaje de programación Python.
-`(Trabajo en progreso)`
