@@ -13,7 +13,7 @@ import PercentageHability from "./PercentageHability.astro"
   </div>
 
   <div class="w-full rounded-lg mt-4 dark:shadow-md">
-    <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4  gap-4 text-sm font-medium text-center text-blue-500 dark:text-blue-400" id="fullWidthTab" data-tabs-toggle="#fullWidthTabContent" role="tablist">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4  gap-4 text-sm font-medium text-center text-blue-500 dark:text-blue-400" id="fullWidthTab" data-tabs-toggle="#fullWidthTabContent" role="tablist">
       
       <button id="Backend" data-tabs-target="#backend" type="button" role="tab"
         aria-controls="stats" aria-selected="false"
@@ -47,43 +47,43 @@ import PercentageHability from "./PercentageHability.astro"
     <div id="fullWidthTabContent">
       <div class="hidden rounded-b-lg" id="backend" role="tabpanel" aria-labelledby="stats-tab">
         <div class="grid md:grid-cols-2 gap-8 bg-white dark:bg-neutral-950/60 rounded-lg p-6 mt-8">
-            <PercentageHability name="PHP" percentage="90"/>
-            <PercentageHability name="LARAVEL" percentage="90"/>
-            <PercentageHability name="PYTHON" percentage="80"/>
-            <PercentageHability name="NODE" percentage="60"/>
+            <PercentageHability name="PHP" percentage="90" image="php"/>
+            <PercentageHability name="LARAVEL" percentage="90" image="laravel"/>
+            <PercentageHability name="PYTHON" percentage="80" image="python"//>
+            <PercentageHability name="NODE" percentage="60" image="nodejs"//>
 
         </div>
         
       </div>
       <div class="hidden rounded-b-lg " id="frontend" role="tabpanel" aria-labelledby="about-tab">
-        <div class="grid grid-cols-2 gap-8 bg-white dark:bg-neutral-950/60 rounded-lg p-6 mt-8">
-            <PercentageHability name="CSS3" percentage="80"/>
-            <PercentageHability name="HTML" percentage="90"/>
-            <PercentageHability name="JAVASCRIPT" percentage="70"/>
-            <PercentageHability name="ASTRO" percentage="95"/>
-            <PercentageHability name="NEXTJS" percentage="70"/>
-            <PercentageHability name="LIVEWIRE" percentage="75"/>
-            <PercentageHability name="TAILWINDCSS" percentage="99"/>
-            <PercentageHability name="ALPINE JS" percentage="80"/>
+        <div class="grid md:grid-cols-2 gap-8 bg-white dark:bg-neutral-950/60 rounded-lg p-6 mt-8">
+            <PercentageHability name="CSS3" percentage="80" image="css" />
+            <PercentageHability name="HTML" percentage="90" image="html5" />
+            <PercentageHability name="JAVASCRIPT" percentage="70" image="javascript"/>
+            <PercentageHability name="ASTRO" percentage="95" image="astro"/>
+            <PercentageHability name="NEXTJS" percentage="70" image="nextjs"/>
+            <PercentageHability name="LIVEWIRE" percentage="75" image="livewire"/>
+            <PercentageHability name="TAILWINDCSS" percentage="99" image="tailwindcss"/>
+            <PercentageHability name="ALPINE JS" percentage="80" image="alpine"/>
 
         </div>
       </div>
       <div class="hidden rounded-b-lg " id="database" role="tabpanel" aria-labelledby="faq-tab">
         <div class="grid md:grid-cols-2 gap-8 bg-white dark:bg-neutral-950/60 rounded-lg p-6 mt-8">
-            <PercentageHability name="MONGODB" percentage="60"/>
-            <PercentageHability name="MYSQL" percentage="90"/>
-            <PercentageHability name="POSTGRESQL" percentage="80"/>
+            <PercentageHability name="MONGODB" percentage="60" image="mongodb"/>
+            <PercentageHability name="MYSQL" percentage="90" image="mysql"/>
+            <PercentageHability name="POSTGRESQL" percentage="80" image="postgresql"/>
         
         </div>
       </div>
       <div class="hidden rounded-b-lg " id="tools" role="tabpanel" aria-labelledby="faq-tab">
         <div class="grid md:grid-cols-2 gap-8 bg-white dark:bg-neutral-950/60 rounded-lg p-6 mt-8">
-            <PercentageHability name="AWS" percentage="60"/>
-            <PercentageHability name="SWAGGER" percentage="70"/>
-            <PercentageHability name="POSTMAN" percentage="80"/>
-            <PercentageHability name="LINUX" percentage="80"/>
-            <PercentageHability name="DOCKER" percentage="85"/>
-            <PercentageHability name="GIT" percentage="95"/>        
+            <PercentageHability name="AWS" percentage="60" image="aws_light"/>
+            <PercentageHability name="SWAGGER" percentage="70" image="swagger"/>
+            <PercentageHability name="POSTMAN" percentage="80" image="postman"/>
+            <PercentageHability name="LINUX" percentage="80" image="linux"/>
+            <PercentageHability name="DOCKER" percentage="85" image="docker"/>
+            <PercentageHability name="GIT" percentage="95" image="git"/>        
         </div>
       </div>
     </div>
