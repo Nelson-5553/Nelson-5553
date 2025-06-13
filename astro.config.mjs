@@ -1,6 +1,6 @@
 import { defineConfig } from 'astro/config';
 import tailwind from '@astrojs/tailwind';
-import vercel from '@astrojs/vercel/serverless'; // Importa el adaptador de Vercel
+import vercel from '@astrojs/vercel'; // Importa el adaptador de Vercel
 
 import react from '@astrojs/react';
 
