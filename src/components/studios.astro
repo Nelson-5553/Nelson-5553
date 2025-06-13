@@ -37,34 +37,39 @@ const estudios = [
         </p>
       </div>
       
-      {estudios.map((studios)=>(
-        <div class={`flex justify-center items-center w-full h-1 ${studios.color} rounded-t-md`}></div>
-       <div class="grid md:grid-cols-[auto,1fr,auto] justify-center items-center border bg-slate-100/70 dark:bg-neutral-900 w-full p-6 border-gray-200 dark:border-neutral-700 rounded-b-lg mb-6 shadow-sm">
-  <!-- Icono -->
-  <div class={`flex justify-center items-center w-12 h-12 ${studios.color} text-white rounded-md`}>
-    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-      <path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5" />
-    </svg>
-  </div>
-
-  <!-- Nombre y lugar -->
-  <div class="flex flex-col justify-center px-4">
-    <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
-      {studios.nombre}
-    </h3>
-    <p class="text-sm text-gray-600 dark:text-gray-400">
-      {studios.lugar}
-    </p>
-  </div>
-
-  <!-- Periodo -->
-  <div class="bg-sky-100 text-sky-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-sm dark:bg-sky-900 dark:text-sky-300">
-    {studios.periodo}
-  </div>
-</div>
-
-
+      {estudios.map((studios) => (
+        <div class="w-full">
+          <!-- Línea superior -->
+          <div class={`h-1 ${studios.color} w-full rounded-t-md`}></div>
+      
+          <!-- Contenedor principal -->
+          <div class="grid grid-cols-1 sm:grid-cols-[auto,1fr,auto] gap-4 items-center border bg-slate-100/70 dark:bg-neutral-900 w-full p-4 sm:p-6 border-gray-200 dark:border-neutral-700 rounded-b-lg mb-6 shadow-sm">
+            
+            <!-- Icono -->
+            <div class="flex justify-center sm:justify-start items-center">
+              <div class={`w-12 h-12 ${studios.color} text-white rounded-md flex items-center justify-center`}>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5" />
+                </svg>
+              </div>
+            </div>
+      
+            <!-- Nombre y lugar -->
+            <div class="text-center sm:text-left">
+              <h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white">{studios.nombre}</h3>
+              <p class="text-sm text-gray-600 dark:text-gray-400">{studios.lugar}</p>
+            </div>
+      
+            <!-- Periodo -->
+            <div class="flex justify-center sm:justify-end">
+              <span class="bg-sky-100 text-sky-800 text-xs font-medium px-2.5 py-0.5 rounded-sm dark:bg-sky-900 dark:text-sky-300">
+                {studios.periodo}
+              </span>
+            </div>
+          </div>
+        </div>
       ))}
+      
         
     
   <style>
