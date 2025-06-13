@@ -27,8 +27,7 @@ const estudios = [
 ]
 
 ---
-  <div class="w-full lg:h-screen overflow-x-hidden sm:px-2 scrollbar-hide">
-    <div class="w-full h-auto max-w-4xl mx-auto px-2">
+  
       <div>
         <h2 class="mb-4 text-2xl font-bold text-blue-500 dark:text-blue-500">
           Estudios
@@ -40,7 +39,7 @@ const estudios = [
       
       {estudios.map((studios)=>(
         <div class={`flex justify-center items-center w-full h-1 ${studios.color} rounded-t-md`}></div>
-       <div class="grid grid-cols-[auto,1fr,auto] items-center bg-white dark:bg-neutral-900 w-full p-6 border-gray-200 dark:border-neutral-700 rounded-b-lg mb-6 shadow-sm">
+       <div class="grid grid-cols-[auto,1fr,auto] items-center border bg-slate-100/70 dark:bg-neutral-900 w-full p-6 border-gray-200 dark:border-neutral-700 rounded-b-lg mb-6 shadow-sm">
   <!-- Icono -->
   <div class={`flex justify-center items-center w-12 h-12 ${studios.color} text-white rounded-md`}>
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -67,9 +66,7 @@ const estudios = [
 
       ))}
         
-    </div>
-  </div>
-
+    
   <style>
     /* Ocultar scrollbar pero mantener funcionalidad */
     .scrollbar-hide::-webkit-scrollbar {

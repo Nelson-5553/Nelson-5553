@@ -5,8 +5,8 @@ import { getCollection } from "astro:content";
 const certified = await getCollection("certified");
 ---
 
-<div class="max-w-4xl mx-auto py-8">
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
     <h1 class="text-2xl font-bold text-blue-500 dark:text-blue-400 col-span-full">
       Certificados
     </h1>
@@ -54,4 +54,4 @@ const certified = await getCollection("certified");
       ))
     }
   </div>
-</div>
+
