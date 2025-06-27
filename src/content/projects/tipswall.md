@@ -3,7 +3,7 @@ title: TipsWall
 img: "/img/Projectos/tipswall.png"
 icon: "/img/Projectos/svg/tipswall.svg"
 color: "absolute bg-purple-100 text-purple-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-purple-900 dark:text-purple-300"
-isNew: True
+isNew: False
 technologies:
   - laravel
   - mysql
