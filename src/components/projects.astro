@@ -66,7 +66,7 @@ const renderedExperiences = await Promise.all(
     <p class="text-2xl font-semibold my-0">{project.data.title}</p>
   </div>
 
-  <article class="w-full whitespace-normal break-words text-justify md:text-left flex-1 my-0">
+  <article class="w-full whitespace-normal break-words text-left flex-1 my-0">
     <project.Content />
   </article>
 
@@ -89,7 +89,7 @@ const renderedExperiences = await Promise.all(
           Url no disponible
         </span>
       )}
-      <div class="flex flex-row gap-2">
+      <div class="flex flex-col md:flex-row gap-2">
         {!HideButton && (
           <a
             href={project.data.page.url}
