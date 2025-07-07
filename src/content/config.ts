@@ -10,6 +10,7 @@ const projects = defineCollection({
         icon: z.string(),
         color: z.string(),
         isNew: z.boolean(),
+        isActive: z.boolean(),
         technologies: z.array(z.string()),
         page: z.object({
             url: z.string(),
