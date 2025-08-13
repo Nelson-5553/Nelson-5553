@@ -12,7 +12,7 @@ technologies:
   - tailwindcss
   
 page:
-  url: /
+  url: https://gestionepp-main-op7dth.laravel.cloud/
   url_1: https://github.com/Nelson-5553/GestionEPP
 ---
 

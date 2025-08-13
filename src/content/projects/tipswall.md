@@ -12,7 +12,7 @@ technologies:
   - tailwindcss
   
 page:
-  url: /
+  url: https://tips-wall.vercel.app
   url_1: https://github.com/Nelson-5553/TipsWall
 
 ---
