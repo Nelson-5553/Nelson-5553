@@ -2,7 +2,7 @@
 import { getCollection } from "astro:content";
 
 // Get all `src/content/books/` entries
-const books = await getCollection("books");
+const books = await getCollection('books', ({ id }) => id.startsWith('en/'))
 ---
 
 
