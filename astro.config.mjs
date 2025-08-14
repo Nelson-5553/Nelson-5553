@@ -10,5 +10,9 @@ export default defineConfig({
   output: 'server', // Cambia la salida a 'server' para que use serverless en Vercel
   adapter: vercel({ 
     edgeMiddleware: true,
-  }), // Configura el adaptador de Vercel
+  }),
+  i18n: {
+    defaultLocale: "es",
+    locales: ["es", "en"],
+  },
 });
