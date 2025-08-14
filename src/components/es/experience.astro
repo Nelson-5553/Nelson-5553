@@ -1,7 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 
-const experienceEntries = await getCollection("experience");
+const experienceEntries = await getCollection("experience", ({ id }) => id.startsWith('es/'));
 
 // Renderizar una entrada específica (puedes iterar para más entradas)
 const renderedExperiences = await Promise.all(
