@@ -1,7 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 
-const experienceEntries = (await getCollection("projects")).filter(
+const experienceEntries = (await getCollection("projects", ({ id }) => id.startsWith('en/'))).filter(
   (entry) => entry.data.isActive === true
 );
 
