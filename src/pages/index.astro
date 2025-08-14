@@ -1,16 +1,18 @@
 ---
+import { getRelativeLocaleUrl } from 'astro:i18n';
+const aboutURL = getRelativeLocaleUrl("es", "es");
 import Layout from "../layouts/Layout.astro";
-import Welcome from "../components/welcome.astro";
-import Projects from "../components/projects.astro";
-import Experience from "../components/experience.astro";
-import Profile from "../components/profile.astro";
-import Footer from "../components/Footer.astro";
-import Hability from "../components/habylity.astro";
-import EducationBoard from "../components/EducationBoard.astro";
-import HabilityBoard from "../components/HabilityBoard.astro";
+import Welcome from "@components/welcome.astro";
+import Projects from "@components/projects.astro";
+import Experience from "@components/experience.astro";
+import Footer from "@components/Footer.astro";
+import EducationBoard from "@components/EducationBoard.astro";
+import HabilityBoard from "@components/HabilityBoard.astro";
 ---
 
 <Layout title="Nelson" class="some-class">
+  <a href={aboutURL}>Blog</a>
+
   <Welcome />
 
   <Projects />
@@ -21,7 +23,5 @@ import HabilityBoard from "../components/HabilityBoard.astro";
 
   <Experience />
 
-  <!-- <Profile /> -->
-  <br />
   <Footer />
 </Layout>
