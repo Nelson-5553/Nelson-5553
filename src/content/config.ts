@@ -1,5 +1,4 @@
 import { defineCollection, z } from "astro:content";
-import Habylity from "../components/habylity.astro";
 
 const projects = defineCollection({
 
