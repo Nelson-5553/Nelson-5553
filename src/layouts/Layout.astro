@@ -1,12 +1,14 @@
 ---
 import ClientRouter from 'astro/components/ClientRouter.astro';
-import Nav from '@components/es/nav.astro';
 interface Props {
   title: string;
   class: string;
+  lang: string;
 }
-const { title } = Astro.props;
-
+const { title, lang = "es" } = Astro.props;
+import NavEs from '@components/es/nav.astro';
+import NavEn from '@components/en/nav.astro';
+const Nav = lang === "en" ? NavEn : NavEs;
 ---
 
 <!doctype html>
@@ -99,9 +101,10 @@ document.addEventListener('astro:page-load', () => {
         <!-- Puedes agregar botones o configuraciones aquí -->
       </div>
       <div class="flex flex-col justify-start items-start mt-32 min-h-screen max-w-7xl prose dark:prose-invert">
-          <Nav />
-            <!-- Contenido ajustado arriba a la izquierda -->
+          <div>
+            <Nav lang={lang} />
             <slot />
+          </div>
         </div>
     </main>
 </body>

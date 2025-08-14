@@ -19,10 +19,10 @@ const LinkImage = `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="
 </svg>
 `
 ---
-<div data-aos="fade-up"></div>
-<div id="Inicio" class="flex justify-center items-center space-x-4">
-  <img src="/img/NELSON.jpg" alt="Perfil" class="rounded-full h-16 w-16 mx-auto shadow-lg" />
- <Badge>Disponible para trabajar</Badge>
+<div data-aos="fade-up">
+<div id="Inicio" class="flex justify-start items-center space-x-4">
+  <img src="/img/NELSON.jpg" alt="Perfil" class="rounded-full h-16 w-16 shadow-lg" />
+  <Badge>Disponible para trabajar</Badge>
 </div>
 
 <h2 class="text-4xl font-bold -mt-4">Hola, soy Nelson</h2>
@@ -32,11 +32,12 @@ const LinkImage = `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="
 </p>
 
 
-<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 lg:w-1/2 w-auto">
   <ButtomLink link="https://www.linkedin.com/in/nelson-jimenez-10429a337/" text="Linkedin" icon={LinkedinImage}/>
   <ButtomLink link="https://github.com/Nelson-5553" text="GitHub" icon={GithubImage}/>
   <ButtomLink link="mailto:andresnelson2004@hotmail.com" text="Contactame" icon={MailImage}/>
   <ButtomLink link="https://frontend-1-4-mgww.onrender.com" text="LinkTree" icon={LinkImage}/>
   <ButtomLink link="/PDF/HV.pdf" text="Curriculum" icon={HvImage}/>
+</div>
 </div>
 </div>
