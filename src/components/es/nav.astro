@@ -1,0 +1,48 @@
+---
+import { Image } from "astro:assets"
+import N5553 from "/public/img/N5553.png"
+import NavMenu from "@components/es/NavMenu.astro"
+import ThemeToggle from "./ThemeToggle.astro"
+---
+
+<header class="absolute inset-x-0 top-0 z-50">
+<div class="flex justify-center">
+  <nav class="fixed flex items-center justify-center backdrop-blur-md shadow-xl h-auto w-auto rounded-full mt-6 py-1 px-4 lg:px-8 space-x-0.5 lg:space-x-4 z-50" aria-label="Global">
+    <div class="flex">
+      <NavMenu  Ruta="#Inicio" Name="Inicio" />
+      <!-- <NavMenu  Ruta="#estudios" Name="Estudios" /> -->
+      <!-- <NavMenu  Ruta="#habilidades" Name="Habilidades" /> -->
+      <NavMenu  Ruta="#Experiencia" Name="Experiencia" />
+      <NavMenu  Ruta="#proyecto" Name="Proyectos" />
+      <NavMenu  Ruta="#sobre-mi" Name="Sobre mi" />
+      <!-- <NavMenu  Ruta="#contactame" Name="Contactame" /> -->
+    </div>
+      <ThemeToggle />
+  </nav>
+
+  <!-- Mobile menu -->
+</header>
+<script>
+  document.addEventListener("astro:page-load", () => {
+    const navLinks = document.querySelectorAll("nav a"); // Selecciona todos los enlaces del navbar
+
+    navLinks.forEach((link) => {
+      link.addEventListener("click", (event) => {
+        event.preventDefault(); // Evita el comportamiento por defecto del enlace
+
+        const targetId = link.getAttribute("href").substring(1); // Obtiene el ID de la sección
+        const targetSection = document.getElementById(targetId); // Busca la sección correspondiente
+
+        if (targetSection) {
+          targetSection.scrollIntoView({
+            behavior: "smooth", // Desplazamiento suave
+            block: "start",
+          });
+        }
+      });
+    });
+  });
+</script>
+
+
+

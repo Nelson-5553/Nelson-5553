@@ -1,0 +1,23 @@
+---
+const { percentage, name, image } = Astro.props;
+---
+
+<div class="mb-4">
+  <div class="flex items-center gap-4">
+    <!-- Imagen -->
+    <img src={`/img/technologies/${image}.svg`} alt="image" class="size-12 shrink-0">
+
+    <!-- Contenedor de la barra y los textos -->
+    <div class="w-full">
+      <div class="flex justify-between mb-1">
+        <span class="font-medium text-blue-800 dark:text-gray-100">{ name }</span>
+        <span class="text-sm font-medium text-gray-800 dark:text-gray-100">{ percentage }%</span>
+      </div>
+      <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3">
+        <div class="bg-blue-600 h-3 rounded-full" style={`width: ${ percentage }%`}></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  

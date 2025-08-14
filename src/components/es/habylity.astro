@@ -1,0 +1,34 @@
+---
+import Image from "astro/components/Image.astro"
+import tech from "/public/img/tech1.png"
+---
+<div class="mt-36" data-aos="fade-up">
+<div id="habilidades" class="flex flex-row justify-center items-center space-x-4">
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-8">
+    <path stroke-linecap="round" stroke-linejoin="round" d="m6.75 7.5 3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0 0 21 18V6a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 6v12a2.25 2.25 0 0 0 2.25 2.25Z" />
+  </svg>   
+  <h2 class="font-bold mt-6">Tecnologias</h2>
+</div> 
+
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-6">
+  <!-- Descripción -->
+  <div>
+    <p class="leading-relaxed text-justify md:text-left">
+      Tengo experiencia en desarrollo web, especializándome en <span class="text-blue-500 font-bold">PHP, Laravel, TailwindCSS y PostgreSQL</span> para crear soluciones robustas, escalables y funcionales. Estas herramientas me han permitido construir proyectos eficientes y bien estructurados, asegurando un alto rendimiento y una experiencia óptima para los usuarios.
+      <br><br>
+      Además, he trabajado con tecnologías modernas como <span class="text-blue-500 font-bold">JavaScript, Astro, Next.js y MongoDB</span>, ampliando mi capacidad de adaptación a diferentes entornos y requerimientos. Mi enfoque versátil y mi constante aprendizaje me permiten enfrentar desafíos tecnológicos con soluciones innovadoras y aportar valor en distintos proyectos de desarrollo.
+    </p>
+  </div>
+
+  <!-- Imagen con Marco Rotado -->
+  <div class="flex items-center justify-center w-full h-full">
+    
+      <Image 
+        src={tech} 
+        alt="Nelson" 
+        class="w-full h-full object-cover rounded-xl -rotate-6"
+      />
+    
+  </div>      
+</div>
+</div>
