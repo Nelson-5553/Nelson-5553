@@ -1,6 +1,4 @@
 ---
-import { getRelativeLocaleUrl } from 'astro:i18n';
-const aboutURL = getRelativeLocaleUrl("es", "es");
 import Layout from "../layouts/Layout.astro";
 import Welcome from "@components/es/welcome.astro";
 import Projects from "@components/es/projects.astro";
@@ -11,7 +9,6 @@ import HabilityBoard from "@components/es/HabilityBoard.astro";
 ---
 
 <Layout title="Nelson" lang="es" class="some-class">
-  <a href={aboutURL}>Blog</a>
 
   <Welcome />
 
