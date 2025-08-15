@@ -15,12 +15,32 @@ import NavEs from '@components/es/nav.astro';
 import NavEn from '@components/en/nav.astro';
 const Nav = lang === "en" ? NavEn : NavEs;
 
-// Obtener la ruta actual sin el prefijo de idioma
-const currentPath = Astro.url.pathname.replace(/^\/(es|en)/, '') || '/';
+// Obtener la ruta actual y limpiarla
+let currentPath = Astro.url.pathname;
 
-// Generar URLs para cambio de idioma
-const esUrl = getRelativeLocaleUrl('es', currentPath);
-const enUrl = getRelativeLocaleUrl('en', currentPath);
+// Debug: log the original path
+console.log('Original path:', currentPath);
+
+// Remover prefijos de idioma
+if (currentPath.startsWith('/en/')) {
+  currentPath = currentPath.replace('/en', '');
+} else if (currentPath.startsWith('/es/')) {
+  currentPath = currentPath.replace('/es', '');
+}
+
+// Si la ruta queda vacía, usar '/'
+if (!currentPath || currentPath === '') {
+  currentPath = '/';
+}
+
+console.log('Cleaned path:', currentPath);
+
+// Generar URLs para cambio de idioma usando getRelativeLocaleUrl
+const esUrl = getRelativeLocaleUrl('es', currentPath === '/' ? '' : currentPath);
+const enUrl = getRelativeLocaleUrl('en', currentPath === '/' ? '' : currentPath);
+
+console.log('ES URL:', esUrl);
+console.log('EN URL:', enUrl);
 ---
 
 <!doctype html>
@@ -67,11 +87,11 @@ const enUrl = getRelativeLocaleUrl('en', currentPath);
           const moonIcon = toggleButton.querySelector('svg:nth-child(2)');
 
           if (isDarkMode) {
-            sunIcon.style.display = 'block';
-            moonIcon.style.display = 'none';
+            if (sunIcon) sunIcon.style.display = 'block';
+            if (moonIcon) moonIcon.style.display = 'none';
           } else {
-            sunIcon.style.display = 'none';
-            moonIcon.style.display = 'block';
+            if (sunIcon) sunIcon.style.display = 'none';
+            if (moonIcon) moonIcon.style.display = 'block';
           }
         }
       }
@@ -105,26 +125,47 @@ const enUrl = getRelativeLocaleUrl('en', currentPath);
       });
     </script>
 
-    <!-- Script para el cambio de idioma -->
-       <script is:inline define:vars={{ esUrl, enUrl, lang }}>
+    <!-- Script mejorado para el cambio de idioma -->
+    <script is:inline define:vars={{ esUrl, enUrl, lang }}>
       function setupLanguageSelector() {
         const languageSelect = document.getElementById('language-select');
         
         if (languageSelect) {
+          // Establecer el valor correcto del select
+          languageSelect.value = lang;
+          
           languageSelect.addEventListener('change', (e) => {
             const selectedLang = e.target.value;
             
-            console.log('Changing language to:', selectedLang);
+            console.log('=== Language Change Debug ===');
             console.log('Current lang:', lang);
+            console.log('Selected lang:', selectedLang);
             console.log('ES URL:', esUrl);
             console.log('EN URL:', enUrl);
             
+            // Verificar que no estamos cambiando al mismo idioma
+            if (selectedLang === lang) {
+              console.log('Same language selected, no change needed');
+              return;
+            }
+            
+            let targetUrl;
             if (selectedLang === 'es') {
-              window.location.href = esUrl;
+              targetUrl = esUrl;
             } else if (selectedLang === 'en') {
-              window.location.href = enUrl;
+              targetUrl = enUrl;
+            }
+            
+            console.log('Target URL:', targetUrl);
+            
+            if (targetUrl) {
+              window.location.href = targetUrl;
+            } else {
+              console.error('No target URL generated');
             }
           });
+        } else {
+          console.error('Language select element not found');
         }
       }
 
@@ -134,6 +175,7 @@ const enUrl = getRelativeLocaleUrl('en', currentPath);
       // Reconfigurar en transiciones de Astro
       document.addEventListener('astro:page-load', setupLanguageSelector);
     </script>
+
   </head>
   
   <body class="bg-white dark:bg-neutral-950 h-screen w-screen bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))] bg-fixed min-h-screen transition-colors">
@@ -149,34 +191,35 @@ const enUrl = getRelativeLocaleUrl('en', currentPath);
         >
           <!-- Icono del sol (mostrado en modo oscuro) -->
           <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
-        <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd" />
+            <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd" />
           </svg>
           <!-- Icono de la luna (mostrado en modo claro) -->
           <svg class="w-5 h-5 text-slate-400" fill="currentColor" viewBox="0 0 20 20">
-        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
+            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
           </svg>
         </button>
+        
         <!-- Selector de idioma mejorado -->
         <div class="flex items-center space-x-2">
           <label for="language-select" class="sr-only">
-        {lang === 'es' ? 'Seleccionar idioma' : 'Select language'}
+            {lang === 'es' ? 'Seleccionar idioma' : 'Select language'}
           </label>
           <select
-        id="language-select"
-        class="border border-gray-300 dark:border-gray-700 rounded-md px-3 py-2 text-sm bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            id="language-select"
+            class="border border-gray-300 dark:border-gray-700 rounded-md px-3 py-2 text-sm bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:border-transparent cursor-pointer"
+            value={lang}
           >
-        <option value="es">🇪🇸 Español</option>
-        <option value="en">🇺🇸 English</option>
+            <option value="es">🇪🇸 Español</option>
+            <option value="en">🇺🇸 English</option>
           </select>
         </div>
       </div>
       
       <div class="flex flex-col justify-start items-start mt-32 min-h-screen max-w-7xl prose dark:prose-invert">
         <div class="w-full">
-          <!-- Header con navegación y selector de idioma -->
+          <!-- Header con navegación -->
           <header class="flex items-center justify-between mb-8 not-prose">
             <Nav lang={lang} />
-            
           </header>
           
           <!-- Contenido de la página -->
