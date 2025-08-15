@@ -2,7 +2,7 @@
 import { getCollection } from "astro:content";
 
 // Get all `src/content/books/` entries
-const certified = await getCollection("certified", ({ id }) => id.startsWith('es/'));
+const certified = await getCollection("certified", ({ id }) => id.startsWith('en/'));
 ---
 
 
