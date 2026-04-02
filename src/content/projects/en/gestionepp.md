@@ -12,8 +12,8 @@ technologies:
   - tailwindcss
   
 page:
-  url: ""
-  url_1: ""
+  url: null
+  url_1: null
 ---
 The efficient solution for managing Personal Protective Equipment in companies. Optimize administration, ensure compliance, and keep accurate records all in one place.
 

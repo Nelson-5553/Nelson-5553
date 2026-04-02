@@ -12,8 +12,8 @@ technologies:
   - tailwindcss
   
 page:
-  url: ""
-  url_1: ""
+  url: null
+  url_1: null
 ---
 
 La solución eficiente para el control de Equipos de Protección Personal en las empresas. Optimiza la administración, asegura el cumplimiento y lleva un registro preciso en un solo lugar.

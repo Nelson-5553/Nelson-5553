@@ -12,8 +12,8 @@ technologies:
   - postgresql
   
 page:
-  url: /
-  url_1: https://github.com/Nelson-5553/tareas
+  url: null
+  url_1: null
 
 ---
 

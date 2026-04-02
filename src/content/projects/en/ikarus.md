@@ -12,8 +12,8 @@ technologies:
   - postgresql
   
 page:
-  url: ""
-  url_1: ""
+  url: null
+  url_1: null
 ---
 
 Web platform designed to centralize and manage information on university projects. (This project is part of my experience at Centro Innova).

@@ -12,8 +12,8 @@ technologies:
   - swagger
 
 page:
-  url: ""
-  url_1: ""
+  url: null
+  url_1: null
 ---
 
 Provides detailed information about video games using data from the RAWG API. Allows you to explore reviews, ratings, genres, and platforms all in one place.

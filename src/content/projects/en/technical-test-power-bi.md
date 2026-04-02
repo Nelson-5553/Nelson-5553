@@ -11,8 +11,8 @@ technologies:
   - powerbi
   
 page:
-  url: ""
-  url_1: ""
+  url: null
+  url_1: null
 ---
 
 This page offers Power BI technical tests to practice with real-world business data analysis cases. It allows you to learn how to create dashboards, KPIs, and interactive data models according to the level of difficulty.

@@ -12,8 +12,8 @@ const projects = defineCollection({
         isActive: z.boolean(),
         technologies: z.array(z.string()),
         page: z.object({
-            url: z.string(),
-            url_1: z.string(),
+            url: z.string().optional().nullable(),
+            url_1: z.string().optional().nullable(),
         }),
     })
 })

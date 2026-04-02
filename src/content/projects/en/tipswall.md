@@ -12,8 +12,8 @@ technologies:
   - tailwindcss
 
 page:
-  url:
-  url_1:
+  url: null
+  url_1: null
 
 ---
 
