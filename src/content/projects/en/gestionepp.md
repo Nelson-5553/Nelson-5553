@@ -12,8 +12,8 @@ technologies:
   - tailwindcss
   
 page:
-  url: https://gestionepp-main-op7dth.laravel.cloud/
-  url_1: https://github.com/Nelson-5553/GestionEPP
+  url: ""
+  url_1: ""
 ---
 The efficient solution for managing Personal Protective Equipment in companies. Optimize administration, ensure compliance, and keep accurate records all in one place.
 

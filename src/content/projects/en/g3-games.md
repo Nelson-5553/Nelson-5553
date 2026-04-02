@@ -12,7 +12,7 @@ technologies:
   - swagger
 
 page:
-  url: https://my-app-sigma-rosy.vercel.app
+  url: ""
   url_1: ""
 ---
 

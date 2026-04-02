@@ -44,7 +44,8 @@ const renderedExperiences = await Promise.all(
    
     {
       renderedExperiences.map((project) => {
-        const HideButton = project.data.page.url === "/"; // Se evalúa por cada proyecto
+        const HideButton = !project.data.page.url || project.data.page.url === "/" || project.data.page.url.trim() === ""; // Se evalúa por cada proyecto
+        const HideButton_1 = !project.data.page.url_1 || project.data.page.url_1 === "/" || project.data.page.url_1.trim() === "";
         return (  
            // Aquí se renderiza el proyecto
           <div class="flex flex-col items-center">
@@ -84,11 +85,6 @@ const renderedExperiences = await Promise.all(
     </div>
 
     <div class="w-full">
-      {HideButton && (
-        <span class="block w-full text-center text-gray-500 text-sm font-medium py-2">
-          URL not available
-        </span>
-      )}
       <div class="flex flex-col md:flex-row gap-2">
         {!HideButton && (
           <a
@@ -113,7 +109,7 @@ const renderedExperiences = await Promise.all(
             </svg>
           </a>
         )}
-        {project.data.page.url_1 && (
+        {!HideButton_1 && (
           <a
             href={project.data.page.url_1}
             class="flex justify-center items-center w-full gap-2 px-4 py-2 text-sm font-medium text-white bg-black border border-black rounded-lg hover:bg-neutral-800 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-800 mt-0 no-underline"

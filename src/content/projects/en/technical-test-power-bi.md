@@ -11,8 +11,8 @@ technologies:
   - powerbi
   
 page:
-  url: https://power-bi-technical-tests.vercel.app
-  url_1: https://github.com/Nelson-5553/Power-BI-technical-tests
+  url: ""
+  url_1: ""
 ---
 
 This page offers Power BI technical tests to practice with real-world business data analysis cases. It allows you to learn how to create dashboards, KPIs, and interactive data models according to the level of difficulty.
